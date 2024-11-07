@@ -1,0 +1,20 @@
+* C:\Users\xiang\Desktop\HW-1-model\Buck_Zo.sxsch
+*#SIMETRIX
+V1 Vin 0 12
+V2 U1_INN 0 PULSE 0 1 -10u 9.99u 10n 0 10u
+R1 Vo 0 100m
+V3 Vc 0 0.1
+R2 C1_N 0 6m
+L1 H1_CN Vo 600n   
+H1 iL 0 H1$TP_CCVS 1  
+V$H1$TP_CCVS S1_P H1_CN 0
+H2 io 0 H2$TP_CCVS 1  
+V$H2$TP_CCVS I1_N 0 0
+D2 0 S1_P IDEAL
+X$U1 d U1_OUT_BAR 0 Vc U1_INN  pinnames: OUT OUT_BAR RTN INP INN
+X$S1 S1_P Vin d 0 ROFF=1Meg RON=1n THRESHOLD=2 HYSTWD=100m IC='OPEN' LOGIC='POS' pinnames: P N CP CN
+I1 Vo I1_N AC 10m 0
+C1 Vo C1_N 560u   
+.KEEP Vo io
+.GRAPH "db(:Vo/:io)" Curvelabel="Gain_Zo" nowarn=true yunit="dB" complete=True analysis="ac" axisname=bodemag ylog=lin  persistence=0 disabled= 
+.GRAPH "ph(-:Vo/:io)" Curvelabel="Phase_Zo" nowarn=true yunit="degrees" complete=True analysis="ac"  axisname=bodephase ylog=lin   persistence=0 disabled=

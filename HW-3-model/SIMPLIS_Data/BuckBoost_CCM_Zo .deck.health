@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>Simulation Health Report - 2024-10-28 18:34</title>
+<style>
+a {
+	color: blue;
+}
+a:active {
+	color: red;
+}
+a:link, a:visited {
+	text-decoration: none;
+}
+a:hover, a:active {
+	text-decoration: underline;
+}
+body {
+	background-color: #cee3f8;
+	font-family: 'Noto Sans', sans-serif;	
+}
+#container {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+#content {
+	background-color: #ffffff;
+	margin: 40px auto;
+	padding: 25px;
+	min-width: 800px;
+	max-width: 800px;
+}
+h1, h2, h3 {
+	font-family: Menlo, Monaco, monospace;
+}
+.shadowish
+{
+  	position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.shadowish:before, .shadowish:after
+{
+	content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.shadowish:after
+{
+	right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+div.login {
+	margin: 40px auto;
+    width: 300px;
+}
+table.login  {
+	border: 1px #666;
+	width: 100%;
+}
+table.login > thead {
+	color: #fff;
+	background: #666;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+table.login > thead > tr > td {
+	padding: 0.25rem;
+}
+table.login > tbody > tr > td {
+	white-space: nowrap;
+	padding-left: 10px;
+	font-size: 14px;
+}
+table.login > tbody > tr > td + td {
+	font-family: Menlo, Monaco, monospace;
+}
+div.preamble, div.solutions, div.suggestions {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+div.solutions, div.suggestions, div.warnings, div.errors {
+	border: 1px solid;
+	padding-left: 5px;
+	padding-bottom: 15px;
+}
+div.error_intro, div.warning_intro {
+	padding-top: 5px;
+	padding-bottom: 15px;
+}
+div.howtodisable, div.solution, div.suggestion {
+	margin-top: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+div.warnings, div.errors {
+	background: #eeeeee;
+	overflow: scroll;
+}
+</style>
+</head>
+<body>
+<div id="container">
+&nbsp;<!-- otherwise top margin has no bgcolor -->
+	<div id="content" class="shadowish">
+		<h2>Simulation Health Report - 2024-10-28 18:34</h2>
+		<div class="preamble">
+<div class="preamble_intro">The Simulation Health Report was enabled via  the global option setting. To disable this option, run the menu item <b>File > Options > SIMPLIS Options...</b>, and select the desired behavior from the <b>General</b> tab.</div>
+		</div>
+<div class="suggestions_intro">Errors or Warnings were detected during the simulation run.  The Simulation Health Report has analyzed the <a href="BuckBoost_CCM_Zo .deck">simulator input file</a> and has the following suggestions:</div><div class="suggestions">
+<div class="suggestion">SUGGESTION: The SIMPLIS POP analysis analyzes your switching circuit on a switching cycle-by-switching cycle basis. In order to do this, SIMPLIS requires you provide a circuit node voltage which is both periodic and continuously switching. You can get this error message if the voltage connected to the POP trigger gate stops switching or does not cross the POP trigger threshold. Also, you can get this message if the switching period is longer than the <b>Maximum period</b> specified in the <b>Simulator > Choose Analysis...</b> dialog.<br/><br/>For further information please consult the excellent <a href="sxscr://help?4139">documentation</a> on the POP analysis.</div>
+</div>
+<div class="error_intro">Below are the contents of the <a href="BuckBoost_CCM_Zo .deck.err">SIMPLIS error file</a>.</div><div class="errors"><pre>
+****************************************
+<<<<<<<< Error Message ID: 5020 >>>>>>>>
+
+Periodic Operating-Pt Analysis:
+
+    Reaching a time duration equal to
+    `2.00000e-06' without registering the
+    triggering condition that defines
+    the start of a period.  Check your
+    circuit and/or initial conditions.
+
+</pre></div>
+	</div>
+&nbsp;<!-- otherwise bottom margin has no bgcolor -->
+</div>
+</body>
+</html>

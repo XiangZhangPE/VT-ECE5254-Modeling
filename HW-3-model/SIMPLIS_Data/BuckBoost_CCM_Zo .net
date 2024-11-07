@@ -1,0 +1,56 @@
+* C:\Users\xiang\OneDrive - Virginia Tech\xiangzhang_VT_archive\ECE 5254 Modeling\HW-3-model\BuckBoost_CCM_Zo .sxsch
+*#SIMETRIX
+.node_map Vc 49
+.node_map Vp 47
+.node_map d 48
+.node_map Vout 45
+.node_map io 46
+.ac DEC 25 100 500k
+.print
++ ALL
+.options
++ PSP_START=3m
++ PSP_NPT=10001
++ POP_ITRMAX=200
++ POP_OUTPUT_CYCLES=5
++ SNAPSHOT_INTVL=0
++ MIN_AVG_TOPOLOGY_DUR=1a
++ AVG_TOPOLOGY_DUR_MEASUREMENT_WINDOW=128
+.pop
++ TRIG_GATE={TRIG_GATE}
++ TRIG_COND=0_TO_1
++ MAX_PERIOD=1u
++ CONVERGENCE=10f
++ CYCLES_BEFORE_LAUNCH=200
++ TD_RUN_AFTER_POP_FAILS=0
+*.tran 4m 0
+
+
+C 45 27 1m IC=2
+H1 46 0 VH1$TP_CCVS 1 
+VH1$TP_CCVS 28 0 0
+I2 45 28 AC 10m 0
+V$IPROBE2 24 45 0.0
+.PRINT I(V$IPROBE2)
+.GRAPH IPROBE2#P axisType="grid" persistence=-1 curveLabel="IL" analysis="tran|pop" xLog="auto" yLog="lin"  nowarn=true disabled=false 
+L 22 23 150n
+.PRINT V(#Vout)
+.PRINT V(#io)
+.GRAPH "db(:#Vout/:#io)" Curvelabel="Gain_Zo" nowarn=true yunit="dB" complete=True analysis="ac" axisname=bodemag ylog=lin  persistence=0
+.GRAPH "ph(-:#Vout/:#io)" Curvelabel="Phase_Zo" nowarn=true yunit="degrees" complete=True analysis="ac"  axisname=bodephase ylog=lin  persistence=0
+.PRINT V(#Vout)
+.GRAPH :#Vout axisType="auto" persistence=-1 curveLabel="Vout" analysis="tran|pop" xLog="auto" yLog="auto"  nowarn=true disabled=false PROBEREF=Probe3  
+Rc 27 0 1m
+Rl 24 23 2m
+Ro 45 0 200m
+X$S1 22 0 26 0 SIMPLIS_VC_SWITCH vars: ROFF=1Meg RON=1u THRESHOLD=2 HYSTWD=1m IC='OPEN' LOGIC='POS'
+X$S3 21 22 25 0 SIMPLIS_VC_SWITCH vars: ROFF=1Meg RON=1u THRESHOLD=2 HYSTWD=1m IC='OPEN' LOGIC='POS'
+X$U1 48 43 0 49 44 SIMPLIS_DIGI1_COMP_Y vars: IC=0 RIN=10Meg ROUT=10 HYSTWD=2M VOL=0 VOH=5 DELAY=2p
+X$U2 25 26 0 47 29 SIMPLIS_DIGI1_COMP_Y vars: IC=0 RIN=10Meg ROUT=10 HYSTWD=1m VOL=0 VOH=5 DELAY=2p
+V2 44 0 SAW V1=0 V2=1 FREQ=300000 DELAY=0 OFF_UNTIL_DELAY=NO
+V3 49 0 250m
+V6 47 0 167m
+V7 29 0 SAW V1=0 V2=1 FREQ=1000000 DELAY=0 OFF_UNTIL_DELAY=NO
+V8 21 0 12
+X1 48 42 PERIODIC_OP vars: VREF=2.5 VOL=0 VOH=5 HYSTWD=2m DIVIDE_BY_2=0 IC=0 DELAY=0 TRIG_COND='0_TO_1'
+.end

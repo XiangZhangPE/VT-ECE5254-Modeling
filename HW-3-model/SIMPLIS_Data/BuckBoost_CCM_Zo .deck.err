@@ -1,0 +1,11 @@
+****************************************
+<<<<<<<< Error Message ID: 5020 >>>>>>>>
+
+Periodic Operating-Pt Analysis:
+
+    Reaching a time duration equal to
+    `2.00000e-06' without registering the
+    triggering condition that defines
+    the start of a period.  Check your
+    circuit and/or initial conditions.
+

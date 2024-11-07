@@ -1,0 +1,112 @@
+simplis VERSION 8.30, RELEASE Rel-19.30 -- .t1 FILE                    
+                           8 IEEE754 LITTLE-ENDIAN                     
+                                                                                                                                 
+                                                                       
+
+?@@--START ENCRYPTION: "DECK INFO FOR SIMPLIS"
+?@@ha6LA+PFErm2Jqj8L/kDPa8UJSUDq+nKDj//hXMSHBGQpywSvlwz/TuL/GO1VG5JofXj?##
+?@@sjHmiu6oI00iwMTwUp6A6N0aWNyRKSiiUQaeUcM6cepAhY1LJUX07K3Vc16HVfGlKQDG?##
+?@@cxMtzauUx6JIx2m+NZ+jLdADy09IGCob+ZryZiBo+lQWTtKV/DJ/nQ5uzP/6IaC/N4pU?##
+?@@xMxXxc29NEKmthFpdTfGYPqADYFN/E8VxLYePrsWydFuGcKPeLiKbm14cMUI4iQyAO9p?##
+?@@kRWJKvuPJ/2DEWNjrLqYJpNo+LRjipqU1IrPVoMFWI4jmYR2WvuxYb/sbd/Ur8YJEQp1?##
+?@@6hMs41O2wV6rqWlb2l6KYqhTdA5h5xTT+xIYZmAV5tx39XwulPzdHdKCQ6DaEHuihMa6?##
+?@@m2tInivtpgM/ooQk2I3OJJDXcUWDnnkBHCmZGPT0RQE9qaLyXqjyt9mP2/LTYdrB71pB?##
+?@@jOoqcBYH0FxpCzro1/nUsV4ThSCrja2bSz5k8xLmQ6jLbhgy39gOXWOBNNdix2M9nkWo?##
+?@@OSH5yuYJMubsoIWdt4IQVs1v4OVDH0aasUghQdMge0cgiFAFF9KNsEDMmKnD2o1+5bvn?##
+?@@MuVzXzSDPuQjeMBQ9n9lIgFwvRbODFTDiDXw5562a0B80a4xs1bVG7I05nZlrbpm31I4?##
+?@@A1DyJpEBd97ekk/CQ5kZtJbZEpHcvfTFng1+0NjvdSBFAl0z1kTLn2sV1gnzH2kKzwZu?##
+?@@7CRSlNS/n0dA2REi9VayXINeIQXqPk979NiY/QZJwxldtGoxRR9Y0p/PSex6veXbJXJd?##
+?@@6QoZi+42hpqrXWusuri8O25YHJ96ojMu2vPln/kv68EMyL2QJKH6KAMOl4VbT6WzHutz?##
+?@@gpRr/Qlisknt591GUU5oFvyJRuK6cOdtOKJU/WOMZFMdOluuZ2Kzz9AsESAGFKKqLJED?##
+?@@x+aQzvYdxj1LpdafWAPAAZ9LeIwpjC7MVENTG3ymuCZ19umyeLLmUz9oiyjyaEOM92xB?##
+?@@6AEGMpA/8bwmFqv4rN58zOh2GCWsXtK3y1sYUZvPTPmV8HZfGkAv7wrGbyrtveDQVnW2?##
+?@@ab2NW6Q8pjB9qvuY4B96Zs6FVCy7uQDw29PNBz/892i1seJ3IVgC2lluwyBlZnwhMw/I?##
+?@@jvxQIbX+9LNxHN+2fPj4fD7m5Zqi3B7q8wYE5vuKJi9WvClpS8ZETsmbJuT+v11zy4N5?##
+?@@u3+rqrV76qf3hcnJiRql4XjcvacUAdAQeOg6dgPwPaer2wZ4s1UvDcPpVXNyFmU6+i1P?##
+?@@RH/LloWoQN8T/vmP5RmUyd7CVU/sABKU2IY9GwwhnDH7dyy6qqsNQYLC3figyNKhxNPT?##
+?@@ab2NW7i2e2+EKLpwaPDMiTDmH+8l4ZYikziNBinyQ1mANBnqH+crSQjjLmQujerkEH3m?##
+?@@wrswFB6lfiXMbHxr+UO8cOZ8FkUQnNjZFXxo3gGLkm8DKGFzcb+/VNm9a+lWrq9SpsFz?##
+?@@OzIfetC1kF8nk8OduHSOfUI7taReS3DSFaI831T6ajh9tALfyLbh4NDEVjQSq5/XG3a/?##
+?@@gINETOo5ewwxD7aH28ipXdl+P3fYLhKs4ozH7e2gwe98yasqpqmfu3Bt7SlLUTJog8G7?##
+?@@idHwZz8ZNUv6cH3ukdKwCLVZL2w5vMTpj6wook/58aUt5mKlNNsw0LrgFle3UR5DJtkr?##
+?@@rg+zLfZv9LUs06Htr8DrnooVxWgISwqM/szP7Exyavo7UUU711uN26Zpc2/zNNR2qOfe?##
+?@@l0n8PGWbGLtb0PsLTL9iTXNWzri6iWQsL3EfsqvFJZRp5ibIf+KSwyl+M5arHpQodfjK?##
+?@@cPoTxjSXMo11/3viZyPMnfzeOu6DUiqC2uTo0s7Xhv6Sk/5QODJ7nsLX9bRE/x+YKdCI?##
+?@@xdVqHde+Zpw5vuP1lJWbF9pAkH7Tsb07xg3lnY9aHZl5+F5zRjQyuxsi1VxEie1d6mxC?##
+?@@OikMIhKk4U1II8MVlhQyYR9QxVTpHFw7gDisjdBC2YvN2kmT8k2uJjkZURvbph+EXOFh?##
+?@@n46U/2rDgQHWFtYV3KleDSvWX9GTEuZFo2FuEhNWwnMfxla+gtqPOMuUTbroNBAz8YPo?##
+?@@qNtAG5/olfS4tiU30MdffJqUSxiRnz7W7Qs03y29l22M86ajACq/8+hVwih8bp4t6g7/?##
+?@@ZZtB+hLde/8ild7QAk4jpNPgRATej7uctf+QU/vzNuWtUxbj6qrUwPL9mr7ZSRUd9SIv?##
+?@@oqjOCECA6ze1jZSbeu6zXDIkBv5Y+HJlyh7XXc/21psVBBQBCZtnAn4UJEgk5FGzheQY?##
+?@@f3sx854+24oAKA0ThaMM0vmLzK5MtG94t9UbQ/H7kPnW8MHi4AiWoF7Ea4m+4GDgXAfv?##
+?@@CHtR4MEhS/Ef1kXDONxDxwPChQpVu3/lTylXbZAEO2pVZ/c+Qryw183iK0GshdgPKjOb?##
+?@@2YHoBTYO0k6NqH3omVmgQd4AV2e0hZyJLJPzzMB6C3Xir4y+TmS/Tnea5BHTyPhhcfsn?##
+?@@Dq/E8naJVu3lFP85Py3sV+Zy2tzd0exWoRZ7cbUy78vRNH5p73aAADgqe3J3LKS4gIQo?##
+?@@g51+VVoxyg5lz6HeZIjk4g029TKAdMQd+Tc79a+qTk00fg3lQDvoKn2GMsWc9P6FNE82?##
+?@@0DM86Spagv/JALLvkOvsBTmbvzYMnXpnCKREENyumOu2std+oDWyChZZfe73VKSi75l8?##
+?@@fWkLQ15vh4rVJOKwKy5avpAaqbIPe2hhRWJ80jPddi8CHz5kDDS4P8P+PKuKBFcpkyY9?##
+?@@YoEI8amgL5A5WPIEW/ImGfW0nyTkgA2/nDPNuYM/EWPNnCdGEiTgBZC9vzC29MYT2RR0?##
+?@@5/nz2pC+rv02Gvnqejf4RNAqbBRJHbAWSfCOoUvMZP6vp93VChlDA6DSCLPi2YvWyZE2?##
+?@@kA120jQBFzPAnlZ6rzRhtf7+jO0U5lMgmvgqDXnDDsuo4SmIs3kgpvevbgdZ3DQ5ztx7?##
+?@@BWIY1gNW6Zz6Q968sW1o/TJI9/ac+z5v/QRj5FlJNfc5zj9IdZq0YSZStE2pv3iQGBVH?##
+?@@quxmy2i2pHkt+Ijcff9FbLWG2qmnR1C1duSfkR/3TNPVgE+eo3gTlXOdQrSMPrjJFckm?##
+?@@001188pzdw/hcZcmBOj8cSPC3JF0VyWEdbuYdICqTbmgtQuoR7KCurDB+rBuOixzxQie?##
+?@@+Is3uIHZpTYPF9Wkj4voeSKBaRNtqrTphOeqa3x/y+sTW+BXNx/YjNdR8qxUBwZjNf1H?##
+?@@3aM0ZmX8XaaBSe+yJspZZGvLWSujeHYP9gisbQG5PIHId/S49v92zJkMKxj57otrP4wa?##
+?@@Qm6l5aJ+6rcRmmd+7040qor9GEj+cYAncYp69481G9gXWuJJQpb+8orvpSWLQOX/40He?##
+?@@/8e9I4abivoZIaYTXlxdH1DmWYNLiEVUk/1vkQDlNbtPnwcV/OtxwvOYnB3OO22rV2z7?##
+?@@RH/LltjAbxCfW7WX6HR0eExdJ5u35/D2yf73NNv4yXpcaqSPpNEFHoISeJG0wLId1OL+?##
+?@@zRkC4G28S+9CAo0lNrpn5Ei8xc4e7+ZiqW6a3u61OPR71bdfyHWihcSqHKdVM/hLMSay?##
+?@@Qm6l5bfXaVchvrnn5hZhXhclN1DCwOLMudYAoMy3rKtlZhSIiopMc3ZbHvu6mfe13rZ5?##
+?@@a8+0DH4I/IonJ7lbgSo2ekq/DN5RYAXoizxS0btOupDqkoJYrJQvlZIEDd+Z3C7OGaDw?##
+?@@OBjmccTnJiMLc+iNxyZQ31/FPScM8NhY462Wcie9HFVLRcw7vN3zCBEWA2C4S1T74cgX?##
+?@@ha6kBuC2aQvyfy53pCrSEmXem4lDOSIcBZu/nY1NWzz4Sw+Q7vmLeN9qMWjsQtfjJvEN?##
+?@@sjH/ju3MFKCRqFUTWEOzE1I8oXQBWDT7A6EWxW3L0JD4S/Jjh2+RUuDJ7OIRs/pi3LvL?##
+?@@R5kEn+rAq3GsrEm+xmsK3NLGP/CWW+QTBPhY/4fH2+bQvOE7DXdWItk/QnBA8gjJCJg+?##
+?@@8Eaf9ZVkIZgKV8pQ2NUt95KHsM/MmoSEgnEb55+/g7wd+Er2N+hncs9wkhET70KnKhCC?##
+?@@pcEHEtf6RMOf68u8pQQwFMPkJrjeKomrKgnxu0NqTLcHXcmW/tDZE72Sd2BTCaj3kVO0?##
+?@@vpjks+o0sT13RP5LslzZPdjK78eIiMBweVh2+/WZib+bt74oS5MEx7oXWLbgdqUaDEc1?##
+?@@q/V5JA/Rekf/6oJcPFDPnAPaP2uipt/Cmmxl26Y6g/PR+2GSjtfNUiDXlrw1SVhYYtQR?##
+?@@CHtR4G0esFKRmEHft8mUE6iNdX/s2Ji0CASeHX5SMT95K03m/5Vx+8ZkemIcaPjgSrYK?##
+?@@jfM9yaw34dW5aWfX+mtq8Nx9LFtxp3F28gGp28xDQRs9VK8nj2YwPSENWFRR6TpJzpsq?##
+?@@FvRdtR/UhFvCL3JpmL2mqEsxyln2s9pFN7pW8vkTvLbSpxnUvwSbJhn/85V02kDIceca?##
+?@@n46U/2z6SLOCoLcOu+kueVtP7IAlNM7ojNQlXSW+AMlFuj/Zu5kqvdzbyzpSUQvvPuvY?##
+?@@sCDZ3mHRtKbV6RSdJglfInn0vr7nCHWWapaXOaca7T5yLg8xRgfHHIPIiU5GIaijvpZ9?##
+?@@vZDRWm6TzF33djFtBZhdpY+dNJY7qYGfNruH1pA+iSe2eBwX5ohyQSow/YvvEUDOkpgf?##
+?@@9noRB/cR29lk3fY0C5I0Hx5o37Fx75RokbHHXINS4/2no+RP3yLsCdKhBApl/Lr2ne9Y?##
+?@@F/xoDU1XM2Nw2bgzWVlCRErQV9r69xtamiRCIt/ZTspZuEQg67tyAbOnvTjOxoMyGvVE?##
+?@@--END ENCRYPTION: "DECK INFO FOR SIMPLIS", 73 lines
+
+
+INDEX OF STATES: 8
+     0  X$S2.S1
+      2 X$S3.S1
+      4 X3.!D_CYCLE
+      6 X$U1.A_COMP-I0
+      8 X$U1.A_COMP-O0
+     10 X$U1.A_COMP-O1
+     12 V3
+     14 I1
+
+
+INDEX OF STATE VARIABLES:
+     0  V(C)
+      1 I(L)
+      2 V(V1)
+      3 V(V3)
+      4 I(I1)
+
+
+INDEX OF SWITCH VARIABLES AS ASSOCIATED WITH DEVICES:
+    -6  CHANGE IN VERILOG-HDL OUTPUT(S)
+    -5  EVENTS FOR DEVICES MODELED BY DLL
+    -4  EVENTS FOR ADV. DIGITAL DEVICES
+    -3  DELAYED EVENTS FOR LOGIC GATES
+    -2  NONLINEAR BLOCK TOLERANCES
+    -1  TIMER
+     0  X$S2.S1
+      1 X$S3.S1
+      2 X3.!D_CYCLE
+      3 X$U1.A_COMP-I0
+
+

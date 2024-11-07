@@ -1,0 +1,11 @@
+>>> Thu Oct 31 22:21:20 2024, requesting 1 copy of simplis, maintenance version 2019.0201,  GRANTED.
+>>> Thu Oct 31 22:21:20 2024, requesting 1 copy of periodic_op, maintenance version 2019.0201,  GRANTED.
+	*** POP version: 8.300000
+	*** Required POP convergence: 1.000000e-14
+	*** POP analysis succeeded after 1 iteration(s).
+	*** POP convergence when exiting the POP analysis: 5.029215e-14.
+>>> Thu Oct 31 22:21:21 2024, returning  1 copy of periodic_op.
+>>> Thu Oct 31 22:21:21 2024, requesting 1 copy of freq_anlys, maintenance version 2019.0201,  GRANTED.
+>>> Thu Oct 31 22:21:22 2024, returning  1 copy of freq_anlys.
+	*** Total number of topologies: 122
+>>> Thu Oct 31 22:21:22 2024, returning  1 copy of simplis.

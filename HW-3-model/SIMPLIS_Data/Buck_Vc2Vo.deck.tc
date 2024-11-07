@@ -1,0 +1,113 @@
+simplis VERSION 8.30, RELEASE Rel-19.30 -- .tc FILE                    
+1730146161                 8 IEEE754 LITTLE-ENDIAN                     
+                                                                                                                                 
+                                                                       
+
+Title: * C:\Users\xiang\OneDrive - Virginia Tech\xiangzhang_VT_archive\ECE 5254 Modeling\HW-3-model\Buck_Vc2Vo.sxsch
+Rc  18  0  1e-03
+Rl  15  14  2e-03
+Ro  32  0  200e-03
+L  13  14  150e-09
+C  32  18  1e-03
+V$IPROBE1  15  32  DC  0
+V4  31  27  AC  MAG=10e-03  PHASE=0
+V6  27  0  DC  167e-03
+V7  24  0  SAW  V1=0  V2=1  FREQ=1000000  DELAY=0  OFF_UNTIL_DELAY=NO
++   IDLE_IN_POP=NO
+V8  12  0  DC  12
+X$S2  13  0  17  0  SUBCKT=SIMPLIS_VC_SWITCH$1
+X$S3  12  13  16  0  SUBCKT=SIMPLIS_VC_SWITCH$2
+X$U2  16  17  0  31  24  SUBCKT=SIMPLIS_DIGI1_COMP_Y$3
+X3  16  29  SUBCKT=PERIODIC_OP$4
+.SUBCKT  PERIODIC_OP$4  -1  -2
+R#PIN_1 -1 1 0.0
+R#PIN_2 -2 3 0.0
+VREF  302  0  DC  2.5
+!D_CYCLE  3  0  1  302  MODEL=M1M
+.MODEL  M1M  COMP  VOL=0  VOH=5  RIN=10e+06  ROUT=50  HYSTWD=0.002
++   DELAY=0  DELAY_TYPE=TRANSPORT  ALWAYS_DELAY=YES
+.INIT  !D_CYCLE=0
+.ENDS PERIODIC_OP$4
+.SUBCKT  SIMPLIS_DIGI1_COMP_Y$3  -1  -2  -3  -4  -5
+R#PIN_1 -1 201 0.0
+R#PIN_2 -2 202 0.0
+R#PIN_3 -3 100 0.0
+R#PIN_4 -4 101 0.0
+R#PIN_5 -5 102 0.0
+R_INN  102  100  10000000
+R_INP  101  100  10000000
+E_DIFF  103  100  101  102  1
+A_COMP  gnd_ref=1  n_input=1  n_output=2  100  201  202  103
++   MODEL=MD_A_COMPM
+.MODEL  MD_A_COMPM  D_BUFFER  RIN=10000000  TH=0  HYSTWD=0.001  ROUT=10
++   VOL=0  VOH=5  STORED_DELAY=0  RISE_DELAY=2.000000000000000e-12
++   FALL_DELAY=2.000000000000000e-12
+.INIT  A_COMP:IC=0
+.ENDS SIMPLIS_DIGI1_COMP_Y$3
+.SUBCKT  SIMPLIS_VC_SWITCH$2  -1  -2  -3  -4
+R#PIN_1 -1 1 0.0
+R#PIN_2 -2 2 0.0
+R#PIN_3 -3 3 0.0
+R#PIN_4 -4 4 0.0
+S1  cntl_var_type=N  num_cntl_items=2  1  2  3  4  MODEL=SW
+.MODEL  SW  VCSW  RON=1e-06  ROFF=1000000  TH=2  HYSTWD=0.001  LOGIC=POS
++   DELAY=0.0  DELAY_TYPE=TRANSPORT  ALWAYS_DELAY=YES
+.INIT  S1=OPEN
+.ENDS SIMPLIS_VC_SWITCH$2
+.SUBCKT  SIMPLIS_VC_SWITCH$1  -1  -2  -3  -4
+R#PIN_1 -1 1 0.0
+R#PIN_2 -2 2 0.0
+R#PIN_3 -3 3 0.0
+R#PIN_4 -4 4 0.0
+S1  cntl_var_type=N  num_cntl_items=2  1  2  3  4  MODEL=SW
+.MODEL  SW  VCSW  RON=1e-06  ROFF=1000000  TH=2  HYSTWD=0.001  LOGIC=POS
++   DELAY=0.0  DELAY_TYPE=TRANSPORT  ALWAYS_DELAY=YES
+.INIT  S1=OPEN
+.ENDS SIMPLIS_VC_SWITCH$1
+.INIT  V(C)=2
+.END
+------------------------------------------------------------------------
+
+
+INDEX OF STATES: 7
+     0  X$S2.S1
+      2 X$S3.S1
+      4 X3.!D_CYCLE
+      6 X$U2.A_COMP-I0
+      8 X$U2.A_COMP-O0
+     10 X$U2.A_COMP-O1
+     12 V7
+
+
+INDEX OF STATE VARIABLES:
+     0  V(C)
+      1 I(L)
+      2 V(V4)
+      3 V(V7)
+
+
+INDEX OF SWITCH VARIABLES AS ASSOCIATED WITH DEVICES:
+    -6  CHANGE IN VERILOG-HDL OUTPUT(S)
+    -5  EVENTS FOR DEVICES MODELED BY DLL
+    -4  EVENTS FOR ADV. DIGITAL DEVICES
+    -3  DELAYED EVENTS FOR LOGIC GATES
+    -2  NONLINEAR BLOCK TOLERANCES
+    -1  TIMER
+     0  X$S2.S1
+      1 X$S3.S1
+      2 X3.!D_CYCLE
+      3 X$U2.A_COMP-I0
+
+
+************************************************************************
+
+STATE
+ %0I02808W0Y02804W04W
+
+I_TC: -30
+************************************************************************
+
+STATE
+ %0Y01804W0Y01808W04W
+
+I_TC: -30

@@ -1,0 +1,307 @@
+simplis VERSION 8.30, RELEASE Rel-19.30 -- .tc FILE                    
+1730322095                 8 IEEE754 LITTLE-ENDIAN                     
+                                                                                                                                 
+                                                                       
+
+?@@--START ENCRYPTION: "DECK INFO FOR SIMPLIS"
+?@@S7s4/UuDKaCofS5D50DCeNttBVcYU0PSn+PzIYMo57HrwXzUS39+HlOB05J4Bdb8TLim?##
+?@@jOoRbAZaXj3SzQEWpqGT/R2SpNDmJElfc8oSEKHwRlux5gjuikJAzaJBR8OMkz64Sqxh?##
+?@@SaoLTtMVAzuf4vkeaq+HsNm9Uo/20PCfl1iAHggy/5xP1KtxNs8xvqMoB8Dxqr8lQDte?##
+?@@bujtFbGelwfMt6hjToz1ZQ0WF/gwimJwau5GVqcGiy9qRXZ1cUL66Yz6mfWmPtrmcHgd?##
+?@@C5WL6Vy5N5yr7llKuNJmO/tMgPgiPY927rhtY+LDMGZe0COCQV5REzBdNK08moiw7t3V?##
+?@@UOawutsfIcvY5KXM+Bcz7KBDoigoTtpLdfftyfsnlT/+b/mENHOAOwZ3CcXtU2U3qzcw?##
+?@@XVaoNzzi73oDr2QHA0ZRYSRoU+jmEwqDyC9zcyDDp6YbS9/dcZRgq5drL8wwRoDzb/Xr?##
+?@@di2G2K/fq5bOz/LibcIcGGe1cZWicof8lj2ozV0xvDPDJELUTnZmPBzy940KoNMYNiTS?##
+?@@Y4obSTCf1l4RV04yuAYbAN4e6rR1q/7nPIIUFonZWQpPQW52V7O5FGYpBhGoeyHFt8Y9?##
+?@@3JohDny3AQy4XfKhUzP9ldX6eutkuAvlEXyxEl2rof7PcAond6FIViRmQXJkTVuDAOOF?##
+?@@9XH+ryrATjXrL4aOtWRJcQRbTMdcEGdtIrk2pM+ZijLO36kQC+Wv0CkNn/6evIq8fevJ?##
+?@@cgs5dzoz0k5SZLaUpL3J7FfTYn23ReU8xfkMdKyRmYKBDpTFz2W9jVGTluNJaNmUBpC3?##
+?@@E9ojrHGCl6h+7lSQN+ebSZ3d5hU7F7taIfaH4DZnZfy/1oYmnmqGifE90bfnXtMVnHVV?##
+?@@sCDZ3vPneYeK31i4AEFWWlaYzY4951Xsp406sko3VrUpX/+HHuZzrk9oqNHiCI4q65Bf?##
+?@@eUe/4QNDm37kGt1c0P8PZ1XMkmHjsVemnBGHur29p6lT/1GT8vm2Y+k+A0I1qu7anEFQ?##
+?@@KqDbnIhL0JI4Vqbd5I3nQHVhIGX0K0NEJrlJznFJrt+w7/sEzWLPoUbahnVROEhisOrJ?##
+?@@zyspkeZdC0o6gwec67YS4r9iGZph46zediMeUdFpzGUghqAhsJ+jAmQ/CJdMtDK25LqZ?##
+?@@BFkFfsOX6y6ESO+dmpm6XRrxbe4/aS/HddYBWzbY8NXltFa0MnjY62SuQdC+fluLyzWb?##
+?@@SaoqUGVpoN/RUl4GMm57ovybVjB0bI8PYbX+n7pEIIW40NAWwuxxjKhQkJE1BIma3RH3?##
+?@@sjH/jnhAKd4AHHHwIzcdqEEeXprnAS5yqYVBgTewYv0qz5Xcj2aQ4gAt1BzlUb1wHdHv?##
+?@@OzIfepyQzOdMNRWgechgQhQIZFbvx9RL6B3HbbuSTV24LZmHxrxHVhY/terJ8fuyMPB2?##
+?@@0DM86RSMwFQKKkg+JXZpbiDc5fGh4FtRn/iRlVu5PKnyMX4OMo/Os+SI8/Fwy4AUip7q?##
+?@@5ejNKYnSfILkae6HRzZ8ct7LVWnfifz+yKFblw+gPVPY2E0dupTJT5tVCNbO2R/KYsyg?##
+?@@4s6TIHeBpOwcsiBdfETUxqsFAXPjYmfLNQmMZUkKkfD3bGY1bZx1l5/9qhc1QN1GKzwC?##
+?@@S7tRAAq7PS85tjLqIyIs1n5Ep+xWJh+b6qdABh8M1Ki0C+SQwJShV+QSrsxHpvclNPh1?##
+?@@yO6jJm/3w6MV4V6Ff3X9o2b5OMltjCW/MHCF3SwzsggVF4wydgrHTn1ki/LR2Y3kGGgs?##
+?@@vZDRWnMCrb/Ae8Zh1xhhqsR/lH+/nb2UJuGxaHV0R/xnBgEqUwMQQMqCnMBX+0Qw+1n4?##
+?@@fnIem94mjP8t4QNs/fKcBG7JG7r1l1XPx0412ij5ooJ7axz4wPsezBLq5wn3lGd1qfn8?##
+?@@S7tRAELeLifxa0lDG5W8oAdwcvofexdMV2FA6FKKWmGGG9Tydqo0G7b8aCz8Da0m4ejx?##
+?@@WCtJfS6DIUPBdIW4jZAZ07LBpAJYoEUlP0jU5jaomdhHykei/LmiVkgg8HcqseB4L0E/?##
+?@@kRWJKuPodRqz58ydjN8ZUsNJeeHFbN4eebePtVcNRbdeWF57mct/F6x5VBAN4JEGqk00?##
+?@@ziIWOUp53FOxjdJgyrDtc1Y9H0IXkGlNxHlTDSTlo1vNQoKBDQ2c8DvICufCoEGcfRhU?##
+?@@E9ojrMReJBviNRwP2NENMA6lmKq0PTWUAjwzqh5UlpQQERMI5oFYA24RQOQVxeT9lXLp?##
+?@@SKIX9xnmaY3jzupdyJRBQMgvWrTqFTQefS6FpK0WAzc7Rcp4651UbNlWACysmkzlRptB?##
+?@@FetKXHMmKmD1+4O+dJIavnYVw647SzuZQI34M6S+kplWl93Wrx4jdM0hd2mRVUgUxTDI?##
+?@@elDSOnd+W9TGbcidgwypEeBxBWsd3/LkKDi/QvDWoClggFU9gPr2959Qod3N1cCyrPBg?##
+?@@L8s6VnGhz7Ktcrp07AMwKQ36oyp+Xbjlob+uaBWtphOfhuLbTaLyG+FdqC5xssR859Wu?##
+?@@rP6MfMvdQaR/7H5WNA3RsnO8uNXw3Mhdao/QLL/1at8UjfOt3q+l10wSk/FA0R2VorfS?##
+?@@Ue/DEqc1//jEE1aWJdU8kFc4WIg/OZALw8h9vZzKk07sP9ebyR61AeFnGN6Z4o/hcht2?##
+?@@Qm6l5eN2FPrQm/Nrk37kgLu7Nf0v/zM+Y46ONolk9oHOItsj/7eCScJa4xymaBR4Fu2q?##
+?@@VyM2JVpYRrKor4oIeERWNrbzcFWkJ32Lr3hMaSUsID79GMRU5ddlbmPxuA83dwmt4R2M?##
+?@@XE6V3x4RY/TtUqFYEF2K3mmwD/uWrSPu5MHdeNmmmt1R4GWcEdNmt+gTLV4s/nATftfZ?##
+?@@cQImHnXk3TFobLpOl8U1iSKlKdQCmUJidhZrDjODz8xLCy8CuySSH4IJ7oiPLmiZ71vr?##
+?@@PkxYg4olnXoKoPxJfAO2g1vHGuxquunLryjK8HEKr0bnuwqhCT6mQrsz377U3k2snWRm?##
+?@@J4ahkzQh9K7H3x6K3nD4W8gJ75m7gRrxEz7aohPZMG+rbSSuL/QSPLhiGHwpnR+b0w8E?##
+?@@gINETE+zfnWXWyx1bUyjdYUCRyyqhXa52MCMIPF0TFKr+8/uooUUzqmAbqgfwy5kbZnU?##
+?@@JXV74szII3qdiR4r9sP+qFqQo3pYAP4DrEwEki+50nuYL50Hk+/mv43FAVtevJWxUkuO?##
+?@@EtEQUyM3yntE8x+Poug8kxfcJykK0DxbP/iUujTJ976YnPV22qZf5Xr136kxui7DmuVB?##
+?@@M+2Gty5mlAgymJsIwRMGIrfGttbhRT0yhE4D9kVyCcR8fYhAH0goDayxXxc9qkLQXxLH?##
+?@@NPaZEDLLkObLtNMahIKIKwIqfA+VFHfSYhQ7RxU1XvBmUmyDRiWeN+gh1oK4f6R3CdZI?##
+?@@qeRTc2Kl2rVfgWGdBPSb1yQptoeQziorkShxjxL2ik0APmXmKr2ncao5PonYjs+NSaZa?##
+?@@sjH/jl5hyByB6OdYgi0PgTOpy4ou9Ua58ANnBknA6CAqJZPx/MLclzqaNZJfYMYXr9ZB?##
+?@@kyev20Evij9UPtfjuDPxnO7daNKnQsfywt44XoXHODs93IKmE1Zsxlbpzo1pNvaqJyBG?##
+?@@sCDZ3mJy/80MqEfVbm6ApNzmWwHykU3BVDT8/PPD7sKqNb3KG0P6Xi/DfPv8LbyDwjMx?##
+?@@wbIdvLT97F4FuJHCgNkfb/CAfyCBG6XH7tw+D/nweNcRegTRFFVX0kTO0XwKxeI4ocBm?##
+?@@oqjOCPtnrtZGekUNuZBIpt65Jf8oWynSA8E4KAtdAvG2E+ZyPcT26qnjg99RqxkvTqac?##
+?@@T96dYjedCX56ptn6MHJ/5IDVIFCITNaLjgIwg1fXq1ZZHB6vSTBIgHnSSx7+1iSmstuM?##
+?@@7CRSlN9SpC56B7iiPIJPoWiNgKmV93VV8T7hYuhMcxAYG9NDhkZ79VY9xhgCzJupaSn6?##
+?@@Ue/DEgt1DJSh1k10FOInYEOeTAS+7LoAg2IiLmuM4tvB/cGaI0NlQraOssvBOdrf1/j6?##
+?@@5vDgguk7b2ztw7q5lR24yNopAjefxS8dF5TvlbYdr1gcrkg4F3le1wml5wVU8ovLtFP5?##
+?@@kyev2+k0CXdgN+5kS04jzM/pQWjZodb26KJJnO5RucklR7bAQPJKpAo+T7Qvb1fV8gPI?##
+?@@nHRb9pJ1vwxvLT+KaJkBfjl1v7nWiiDCUgyx79asytv8nKWcT8O6UvXdwodawq6QLYL3?##
+?@@ZZtB+t2sBRlPaqd+3BUtFrrLyrkW+hPaJ95ygdi/rFZgSlwYPdiFxvn7gHICOvx8LoQd?##
+?@@Qm6l5Y1KBjvJqtMI20ek8ZQFlNcuan5XdtYZBobCC8lt/iZKJzDqHZR6S3oz9V8MM80l?##
+?@@cxNMz7hjNsllsCXOTEDteRL166UtSk7K7C3XvozU7i6U6J/xPWFMmtcgrH0bWN1h0Ak1?##
+?@@LLEBTcI8ygVUh7v5deAoXmHQxgMLJI8ryfB/9QUWgIhVGpTaYf5hmVEBSwHfBxg+rfpl?##
+?@@vZDRWpOJRwtmoKmqBymAwRgR1iCljYU4fhqFDMajR8IHCYJaQ2tAGvq3W9FSfk8rb8tf?##
+?@@NgfAwSbfQPDpjCcDXnVmgD9y/hPDFaHapiiqTSTZp0o/d/SSw4Xi8i9AH/a57KVGImoi?##
+?@@Y4obSTohsKU0GbgnDCMIl9/lRAPT0qZneTI4xLR63D8B3hffljpxEHX68B4E+Kpsjn7D?##
+?@@yO6jJk4Qcv9X8TbeztsWjgrpUoUxoIf5ZRBt3nDT/mlkqbKA1uFNWhgfJ2e42KByhrxf?##
+?@@DaaxmYraAwEsvoSCOggByA0Pe9mc/CC9lBuuyrZYp+0Q+2TMLz0fX/8afhlM8O8osmtO?##
+?@@MuVzXzQU9X4BnSuqZaIyvWr1d8SL2nS8QZRDifnVlNl8fd6ZdKhvaLdB4HpCQ5C4eCM7?##
+?@@i+IWGNEh+jpaiiZut2DQeXin29Fj0FT15YcsmkJ2IsNkBqHpKcweCg80Id4NksyQIzLh?##
+?@@vIe+Ajqu0KW8pFAwFyjqn9t0SvFZmQKYnNdZWRiUQlNffU4sKm5dmY2X+bhszovd3L6y?##
+?@@+ZRLEViiyKYOtYYUDaa5JGk5JDdzn/3E2ivh1yivUt4tuhRKlDglK93CylkooCLXl94L?##
+?@@kh6cgxI11djfPry5Po+X2JxsWEygUz/9HD7n+VfH1hGr+ZdR/6NTXgddXqaxOKf2q4OH?##
+?@@zyspkZJI0t1u9NztFo1XTelrd3/Nc/wt2aeKaCWBDXZj5RZi83WHMOwWdMHNJ71KPYsf?##
+?@@qNtAG1NvDC9JOF4qsFN617x/9aaqhpW5kYkqb2MYXdBW9JVXCIJn0ltx/NX8mXJhgcnT?##
+?@@2YHoBSYJpgGHkDeDuCVErpQpMvisVFp579OVL5Vy8zxBC6i0JNzO5hCQJAmeQh0pognO?##
+?@@Co14kLrcdIhKAv5EAC+aVpMBDqH/+9qDveGZ1g+bU5qA/5Cj83Nf4u+0xpMJ/R+eKLxf?##
+?@@n46U/wDETS42MM6lX7nkAki8I3d6lSlNf6+RfuUp6H57uCT4AGa9uS3tynKomejKHNk5?##
+?@@UOawulLWkazACGx5LRxHR8bw8fgYK8797eelKOAGVtUlJPkS3QRlYPF0uoBaZ6cnwIUS?##
+?@@lTjVjNDo0XDjvPFG16K6M5PlbczEiLods+1EgaGWbanUatYpX/SjuV0TAI8qLZg5EpzB?##
+?@@BmorL8R8LmJg81bTgdCrZHb/gQyjGlIAJ+NgXUUvCTKrLZdifPAlL0Z9jgN44G7Nt/l8?##
+?@@VyM2JWVrtIKIiO3c+3lls1Bm4jTbnrs9oZanr1otbhtFGPF1BK0vyQYY+l/j4tleP7cW?##
+?@@0DM86ayBUd4fJDiNW3CyQ3jyhlgqfCh0/+TbKTVRKIKDPfMGU+HGnUwPsNxJgJZfMNnr?##
+?@@BWIY1lDfyLEcOv6lFJqB2LnIRsGVcKt5d1H+iuQM4d2UEHt3ExOhY6AY+zSVKJ8HqpJh?##
+?@@FvRdtRUQeFsesbqpVRaLv/1txN7k8lOXzXbhztGqF8JCWH0zChmGcbaI/ChvSqOloboo?##
+?@@R5kEn/TVfTFKVYTFRjR4oFpYRHcF900vfFComlyxInye09bNUZbs8HVHbdl0kK8Nn9ti?##
+?@@YHDiQNDZxQ04woGe7jbQa0cYxprRUCDoW/SmZcOrVynsPC4wtvb+avuGYyq9CAuRYXay?##
+?@@tUs4l2lI6LZZ6dpSMUhMOuF8qn3lIo+4F6vm9JQ96tMING/ziMaaYGu9fIutOHreJqBy?##
+?@@vpjks7YoJhl1APubuvCSeJXsq4ee1afrWBbPf22Hk4frMsP7YdzCffk6F5/P1ZJp6P6u?##
+?@@P1Rs3GqIpHR9CosBmnTg+IFgTc3vjDplvpLXn2rNYxNa6Em5IXqkRH3k3vdrVEjKrkCk?##
+?@@+Is3uDz5VzyCNjdFDMydvy/bLrbNmsm+ZSI3hkickmo56Omh05MaX72o2tODuWBtuS3a?##
+?@@wbIdvDUVcCdHhkwDZYV8qDCeuAMM5hYcHcev3BvCjsTxjmWGuLp3LYHtK7ukKVkKxyOL?##
+?@@ZqRUUu1kcEL35DArUqrGbahtGKRg6aBkc+jjPYDkV2TRnGSArpMFk0lZG/amDkSLmuxl?##
+?@@B3M+hygBJNpyFB52kvYLJra/jhyX3HhdpFEkeNCdC7xDkLoB53AjMrnLhbyj0tll3T0E?##
+?@@sCDZ3rX8zAcV41ni5cgRiAnsKbgGZ+v6dmv8Z6S2wg1PR5ALDqvr5ARwd+6NcsZHq9eP?##
+?@@/baXcmJ8sQUq/Nzu7fil+8VfUnxV4JZOUGNSMbjQc6byOQ62enoSCqR1cla3Gq2Pbqbt?##
+?@@Co14kNdRk9wUsNNb3Hce2DS6nLNEc3cHAkDkj30sBB4AfJJCEuiH2UwGkRZsQr8b/x9n?##
+?@@T96dYolSOqk1hAAfOxXgGVjyYGMP9ZVC2AFVtIFCJZWwRYHQe+wFrlA58xD2B+4e8QYo?##
+?@@LLEBTa7NYP9wm9ABbs8z5ZRJ50miz0AWXJ/XnZdL2AbkiV3zjbHI9cvssrmI+vN/tc7X?##
+?@@xdVqHdwPJJZOdl0bwiFWZP0UV6moNI0Vl6NvMWsiVji6ql4KlmRsFA3t0qMs8MpSreoD?##
+?@@jvxQIQ9fPjXRKMsfbkI/xS5XSjZHHwps3Mn6e1HRr+rk1jwInFWezajC+gFS3CbbhNCE?##
+?@@t1xeSPPrDQ6rusi+GbVdiW2/PkCEe1wQbYLiyZsrrbxEyzUI1QpmLA9iN5oGt+OqcmVW?##
+?@@/K2EGpXvYrLsjIGDlEkrLttFPxAIuz+r6sIdaM8qH/APejbr1cnPJrd5k0lxiaNk74l0?##
+?@@zRkC4N6T2HfNYIk1pWm+K14t15BUnvGMRnGHm0OtTQo74EtGaGbFvRmZhnDHS1zuIwjB?##
+?@@xt1rdiIJr268DBwt+wu9eZaU3ao82lkUNIHI4UMmEU/Wy7gs/R/1rIpLcJTJ49YGn+md?##
+?@@--END ENCRYPTION: "DECK INFO FOR SIMPLIS", 110 lines
+
+
+INDEX OF STATES: 13
+     0  X$S2.S1
+      2 X$S3.S1
+      4 X1.!R_FF2
+      6 X1.!R_FF3
+      8 X1.!R_IOUT_LIMIT
+     10 X1.!R_SLEW_RATE
+     12 X1.!R_VM_LIMIT
+     14 X1.!R_VP_LIMIT
+     16 X3.!D_CYCLE
+     18 X$U1.A_COMP-I0
+    20  X$U1.A_COMP-O0
+     22 X$U1.A_COMP-O1
+     24 V3
+
+
+INDEX OF STATE VARIABLES:
+     0  V(C)
+      1 V(C1)
+      2 V(C2)
+      3 V(C3)
+      4 V(X1.C2)
+      5 I(L)
+      6 V(V1)
+      7 V(V3)
+
+
+INDEX OF SWITCH VARIABLES AS ASSOCIATED WITH DEVICES:
+    -6  CHANGE IN VERILOG-HDL OUTPUT(S)
+    -5  EVENTS FOR DEVICES MODELED BY DLL
+    -4  EVENTS FOR ADV. DIGITAL DEVICES
+    -3  DELAYED EVENTS FOR LOGIC GATES
+    -2  NONLINEAR BLOCK TOLERANCES
+    -1  TIMER
+     0  X$S2.S1
+      1 X$S3.S1
+      2 X1.!R_FF2
+      4 X1.!R_FF3
+      6 X1.!R_IOUT_LIMIT
+      8 X1.!R_SLEW_RATE
+     10 X1.!R_VM_LIMIT
+     12 X1.!R_VP_LIMIT
+     14 X3.!D_CYCLE
+     15 X$U1.A_COMP-I0
+
+
+************************************************************************
+
+STATE
+ %0Y01804W0Y01808W0Y01804W0I01808W04W
+
+I_TC: -47
+************************************************************************
+
+STATE
+ %0I02804W0Y01808W0Y01808W0Y02804W04W
+
+I_TC: -47
+************************************************************************
+
+STATE
+ %0Y01804W0Y02808W0Y01804W0I01808W04W
+
+I_TC: -47
+************************************************************************
+
+STATE
+ %0Y01804W0Y02808W0I01804W0I01808W04W
+
+I_TC: -44
+************************************************************************
+
+STATE
+ %0I02804W0Y02808W0I01808W0Y02804W04W
+
+I_TC: -44
+************************************************************************
+
+STATE
+ %0I02804W0Y0280CW0I01808W0Y02804W04W
+
+I_TC: -44
+************************************************************************
+
+STATE
+ %0Y01804W0Y0280CW0I01804W0I01808W04W
+
+I_TC: -44
+************************************************************************
+
+STATE
+ %0I02804W0Y02808W0Y01808W0Y02804W04W
+
+I_TC: -47
+************************************************************************
+
+STATE
+ %0Y01804W0Y0280CW0Y01804W0I01808W04W
+
+I_TC: -47
+************************************************************************
+
+STATE
+ %0Y01804W0Y0180CW0Y01804W0I01808W04W
+
+I_TC: -47
+************************************************************************
+
+STATE
+ %0Y01804W0Y01804W0Y01804W0I01808W04W
+
+I_TC: -47
+************************************************************************
+
+STATE
+ %0I02804W0I02808W0I01808W0Y02804W04W
+
+I_TC: -44
+************************************************************************
+
+STATE
+ %0I02808W0I02808W0I01808W0Y02804W04W
+
+I_TC: -44
+************************************************************************
+
+STATE
+ %0I02808W0I0280CW0I01808W0Y02804W04W
+
+I_TC: -44
+************************************************************************
+
+STATE
+ %0I02804W0I0280CW0I01808W0Y02804W04W
+
+I_TC: -44
+************************************************************************
+
+STATE
+ %0I02808W0I02808W0I02808W0Y02804W04W
+
+I_TC: -47
+************************************************************************
+
+STATE
+ %0I02808W0I03808W0I02808W0Y02804W04W
+
+I_TC: -47
+************************************************************************
+
+STATE
+ %0I02808W0I0380CW0I02808W0Y02804W04W
+
+I_TC: -47
+************************************************************************
+
+STATE
+ %0I02808W0I0280CW0I02808W0Y02804W04W
+
+I_TC: -47
+************************************************************************
+
+STATE
+ %0I02804W0Y0180CW0Y01808W0Y02804W04W
+
+I_TC: -47
+************************************************************************
+
+STATE
+ %0Y01808W0I0280CW0I01804W0I01808W04W
+
+I_TC: -44
+************************************************************************
+
+STATE
+ %0Y01804W0I0280CW0I01804W0I01808W04W
+
+I_TC: -44
+************************************************************************
+
+STATE
+ %0I02804W0Y01804W0Y01808W0Y02804W04W
+
+I_TC: -47
+************************************************************************
+
+STATE
+ %0I02804W0Y01804W0I01808W0Y02804W04W
+
+I_TC: -43

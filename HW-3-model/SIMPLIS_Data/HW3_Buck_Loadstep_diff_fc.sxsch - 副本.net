@@ -1,0 +1,99 @@
+* C:\Users\xiang\OneDrive - Virginia Tech\xiangzhang_VT_archive\ECE 5254 Modeling\HW-3-model\HW3_Buck_Loadstep_diff_fc.sxsch - 副本.sxsch
+*#SIMETRIX
+.node_map Vc1 73
+.node_map Vc2 76
+.node_map Vp1 74
+.node_map Vp2 77
+.node_map Vout1 72
+.node_map Vout2 75
+.ac DEC 100 100 1Meg
+.print
++ ALL
+.options
++ PSP_START=3m
++ PSP_NPT=2001
++ POP_ITRMAX=200
++ POP_OUTPUT_CYCLES=5
++ SNAPSHOT_INTVL=0
++ MIN_AVG_TOPOLOGY_DUR=1a
++ AVG_TOPOLOGY_DUR_MEASUREMENT_WINDOW=128
+.pop
++ TRIG_GATE={TRIG_GATE}
++ TRIG_COND=0_TO_1
++ MAX_PERIOD=10u
++ CONVERGENCE=10f
++ CYCLES_BEFORE_LAUNCH=100
++ TD_RUN_AFTER_POP_FAILS=-1
+.tran 20m 0
+
+
+C 72 43 1m IC=1.8
+C1 48 73 1n IC=0
+C13 75 61 1m IC=1.8
+C14 67 76 3.9p IC=0
+C15 68 67 97.09p IC=0
+C2 50 49 76.92p IC=0
+C3 49 73 5.14p IC=0
+C4 66 76 250p IC=0
+I1 72 0 SQU V1=5 V2=25 FREQ=200 DELAY=0.004 OFF_UNTIL_DELAY=YES IDLE_IN_POP=YES
+I4 75 0 SQU V1=5 V2=25 FREQ=200 DELAY=0.004 OFF_UNTIL_DELAY=YES IDLE_IN_POP=YES
+V$IPROBE1 40 72 0.0
+.PRINT I(V$IPROBE1)
+.GRAPH IPROBE1#P axisType="auto" persistence=-1 curveLabel="IL(fc=80kHz)" analysis="tran|pop" xLog="auto" yLog="lin"  nowarn=true disabled=false 
+V$IPROBE3 58 75 0.0
+.PRINT I(V$IPROBE3)
+.GRAPH IPROBE3#P axisType="grid" persistence=-1 curveLabel="IL(fc=1kHz)" analysis="tran|pop" xLog="auto" yLog="lin"  nowarn=true disabled=false 
+L 38 39 150n
+L1 56 57 150n
+.PRINT V(#Vc2)
+.PRINT V(#Vp2)
+.GRAPH "db(:#Vc2/:#Vp2)" Curvelabel="GT" nowarn=true yunit="dB" complete=True analysis="ac" axisname=bodemag ylog=lin  persistence=0
+.GRAPH "ph(-:#Vc2/:#Vp2)" Curvelabel="PT" nowarn=true yunit="degrees" complete=True analysis="ac"  axisname=bodephase ylog=lin  persistence=0
+.PRINT V(#Vc2)
+.PRINT V(#Vout2)
+.GRAPH "db(:#Vc2/:#Vout2)" Curvelabel="Gc" nowarn=true yunit="dB" complete=True analysis="ac" axisname=bodemag ylog=lin  persistence=0
+.GRAPH "ph(-:#Vc2/:#Vout2)" Curvelabel="Pc" nowarn=true yunit="degrees" complete=True analysis="ac"  axisname=bodephase ylog=lin  persistence=0
+.PRINT V(#Vout1)
+.GRAPH :#Vout1 axisType="auto" persistence=4 curveLabel="Vout(fc=80kHz)" analysis="tran|pop" xLog="auto" yLog="auto"  nowarn=true disabled=false PROBEREF=Probe3  
+.PRINT V(#Vc1)
+.PRINT V(#Vout1)
+.GRAPH "db(:#Vc1/:#Vout1)" Curvelabel="Gc" nowarn=true yunit="dB" complete=True analysis="ac" axisname=bodemag ylog=lin  persistence=0
+.GRAPH "ph(-:#Vc1/:#Vout1)" Curvelabel="Pc" nowarn=true yunit="degrees" complete=True analysis="ac"  axisname=bodephase ylog=lin  persistence=0
+.PRINT V(#Vc1)
+.PRINT V(#Vp1)
+.GRAPH "db(:#Vc1/:#Vp1)" Curvelabel="GT" nowarn=true yunit="dB" complete=True analysis="ac" axisname=bodemag ylog=lin  persistence=0
+.GRAPH "ph(-:#Vc1/:#Vp1)" Curvelabel="PT" nowarn=true yunit="degrees" complete=True analysis="ac"  axisname=bodephase ylog=lin  persistence=0
+.PRINT V(#Vout2)
+.GRAPH :#Vout2 axisType="auto" persistence=4 curveLabel="Vout(fc=1kHz)" analysis="tran|pop" xLog="auto" yLog="auto"  nowarn=true disabled=false PROBEREF=Probe6  
+R1 72 49 100k
+R13 67 66 62.82k
+R14 75 68 10.1k
+R15 75 67 100k
+R2 49 48 78.74k
+R3 72 50 12.75k
+Rc 43 0 1m
+Rc1 61 0 1m
+Rl 40 39 2m
+Rl1 58 57 2m
+Ro 72 0 200m
+Ro1 75 0 200m
+X$S1 37 38 41 0 SIMPLIS_VC_SWITCH vars: ROFF=1Meg RON=1u THRESHOLD=2 HYSTWD=1m IC='OPEN' LOGIC='POS'
+X$S2 38 0 42 0 SIMPLIS_VC_SWITCH vars: ROFF=1Meg RON=1u THRESHOLD=2 HYSTWD=1m IC='OPEN' LOGIC='POS'
+X$S3 56 0 60 0 SIMPLIS_VC_SWITCH vars: ROFF=1Meg RON=1u THRESHOLD=2 HYSTWD=1m IC='OPEN' LOGIC='POS'
+X$S4 55 56 59 0 SIMPLIS_VC_SWITCH vars: ROFF=1Meg RON=1u THRESHOLD=2 HYSTWD=1m IC='OPEN' LOGIC='POS'
+X$U1 41 42 0 74 51 SIMPLIS_DIGI1_COMP_Y vars: IC=0 RIN=10Meg ROUT=10 HYSTWD=1m VOL=0 VOH=5 DELAY=2p
+X$U2 59 60 0 77 69 SIMPLIS_DIGI1_COMP_Y vars: IC=0 RIN=10Meg ROUT=10 HYSTWD=1m VOL=0 VOH=5 DELAY=2p
+V1 37 0 12
+V13 69 0 SAW V1=0 V2=1 FREQ=1000000 DELAY=0 OFF_UNTIL_DELAY=NO
+V14 77 76 AC 1m 0
+V15 55 0 12
+V2 53 0 5
+V3 51 0 SAW V1=0 V2=1 FREQ=1000000 DELAY=0 OFF_UNTIL_DELAY=NO
+V4 52 0 2
+V5 74 73 AC 1m 0
+V7 70 0 2
+V8 71 0 5
+X1 41 54 PERIODIC_OP vars: VREF=2.5 VOL=0 VOH=5 HYSTWD=2m DIVIDE_BY_2=0 IC=0 DELAY=0 TRIG_COND='0_TO_1'
+X2 52 49 53 0 73 PARAM_OPAMP vars: LEVEL=2 VOS=0 IB=1p IBOS=100p A0=100Meg GBW=100Meg SR_POS=1Meg SR_NEG=100Meg CMRR=100Meg PSRR=100Meg RIN=100Meg IO_SRC_MAX=100m IO_SNK_MAX=5m ROUT=10 RO_AC=5 IQ=1m VDIFF_POS=10m VDIFF_NEG=10m USE_BACK_ANNO=1 DEF_IC_R_FF2=1 DEF_IC_R_FF3=1 BA_IC_R_FF2=2 BA_IC_R_FF3=2
+X6 70 67 71 0 76 PARAM_OPAMP vars: LEVEL=2 VOS=0 IB=1p IBOS=100p A0=100Meg GBW=100Meg SR_POS=1Meg SR_NEG=100Meg CMRR=100Meg PSRR=100Meg RIN=100Meg IO_SRC_MAX=100m IO_SNK_MAX=5m ROUT=10 RO_AC=5 IQ=1m VDIFF_POS=10m VDIFF_NEG=10m USE_BACK_ANNO=1 DEF_IC_R_FF2=1 DEF_IC_R_FF3=1 BA_IC_R_FF2=2 BA_IC_R_FF3=2
+.end

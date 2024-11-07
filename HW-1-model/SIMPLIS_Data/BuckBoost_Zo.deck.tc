@@ -1,0 +1,124 @@
+simplis VERSION 8.30, RELEASE Rel-19.30 -- .tc FILE                    
+1726622245                 8 IEEE754 LITTLE-ENDIAN                     
+                                                                                                                                 
+                                                                       
+
+Title: * C:\Users\xiang\Desktop\HW-1-model\BuckBoost_Zo.sxsch
+R3  27  0  200e-03
+R4  21  0  3e-03
+L2  20  0  3e-06
+C2  27  21  300e-06
+V2  25  0  SAW  V1=0  V2=1  FREQ=500000  DELAY=0  OFF_UNTIL_DELAY=NO
++   IDLE_IN_POP=NO
+V3  31  0  DC  250e-03
+V4  26  0  DC  12
+VH2$TP_CCVS  22  0  DC  0
+VH3$TP_CCVS  19  20  DC  0
+I1  27  22  AC  MAG=10e-03  PHASE=0
+H2  30  0  VH2$TP_CCVS  1
+H3  29  0  VH3$TP_CCVS  1
+X$D1  27  19  SUBCKT=DIODE_SPICE_V2$1
+X$S2  19  26  28  0  SUBCKT=SIMPLIS_VC_SWITCH$2
+X$U1  28  24  0  31  25  SUBCKT=SIMPLIS_DIGI1_COMP_Y$3
+X1  28  23  SUBCKT=PERIODIC_OP$4
+.SUBCKT  PERIODIC_OP$4  -1  -2
+R#PIN_1 -1 1 0.0
+R#PIN_2 -2 3 0.0
+VREF  302  0  DC  2.5
+!D_CYCLE  3  0  1  302  MODEL=M1M
+.MODEL  M1M  COMP  VOL=0  VOH=5  RIN=10e+06  ROUT=50  HYSTWD=0.002
++   DELAY=0  DELAY_TYPE=TRANSPORT  ALWAYS_DELAY=YES
+.INIT  !D_CYCLE=0
+.ENDS PERIODIC_OP$4
+.SUBCKT  SIMPLIS_DIGI1_COMP_Y$3  -1  -2  -3  -4  -5
+R#PIN_1 -1 201 0.0
+R#PIN_2 -2 202 0.0
+R#PIN_3 -3 100 0.0
+R#PIN_4 -4 101 0.0
+R#PIN_5 -5 102 0.0
+R_INN  102  100  10000000
+R_INP  101  100  10000000
+E_DIFF  103  100  101  102  1
+A_COMP  gnd_ref=1  n_input=1  n_output=2  100  201  202  103
++   MODEL=MD_A_COMPM
+.MODEL  MD_A_COMPM  D_BUFFER  RIN=10000000  TH=0  HYSTWD=0.002  ROUT=10
++   VOL=0  VOH=5  STORED_DELAY=0  RISE_DELAY=2.000000000000000e-12
++   FALL_DELAY=2.000000000000000e-12
+.INIT  A_COMP:IC=0
+.ENDS SIMPLIS_DIGI1_COMP_Y$3
+.SUBCKT  SIMPLIS_VC_SWITCH$2  -1  -2  -3  -4
+R#PIN_1 -1 1 0.0
+R#PIN_2 -2 2 0.0
+R#PIN_3 -3 3 0.0
+R#PIN_4 -4 4 0.0
+S1  cntl_var_type=N  num_cntl_items=2  1  2  3  4  MODEL=SW
+.MODEL  SW  VCSW  RON=1e-09  ROFF=1000000  TH=2  HYSTWD=0.1  LOGIC=POS
++   DELAY=0.0  DELAY_TYPE=TRANSPORT  ALWAYS_DELAY=YES
+.INIT  S1=OPEN
+.ENDS SIMPLIS_VC_SWITCH$2
+.SUBCKT  DIODE_SPICE_V2$1  -1  -2
+R#PIN_1 -1 1 0.0
+R#PIN_2 -2 2 0.0
+!R_DBODY  1  2  MODEL=MRDM
+.MODEL  MRDM  VPWLR  NSEG=3  X0=-50  Y0=-7.64712e-11
++   X1=0.000195833333333334  Y1=2.99512200000001e-16
++   X2=0.000399989925448318  Y2=0.0979951642151925  X3=0.0005  Y3=20
+.INIT  !R_DBODY=1
+.ENDS DIODE_SPICE_V2$1
+.END
+------------------------------------------------------------------------
+
+
+INDEX OF STATES: 6
+     0  X$S2.S1
+      2 X$D1.!R_DBODY
+      4 X1.!D_CYCLE
+      6 X$U1.A_COMP-I0
+      8 X$U1.A_COMP-O0
+     10 V2
+
+
+INDEX OF STATE VARIABLES:
+     0  V(C2)
+      1 I(L2)
+      2 I(I1)
+      3 V(V2)
+
+
+INDEX OF SWITCH VARIABLES AS ASSOCIATED WITH DEVICES:
+    -6  CHANGE IN VERILOG-HDL OUTPUT(S)
+    -5  EVENTS FOR DEVICES MODELED BY DLL
+    -4  EVENTS FOR ADV. DIGITAL DEVICES
+    -3  DELAYED EVENTS FOR LOGIC GATES
+    -2  NONLINEAR BLOCK TOLERANCES
+    -1  TIMER
+     0  X$S2.S1
+      1 X$D1.!R_DBODY
+      3 X1.!D_CYCLE
+      4 X$U1.A_COMP-I0
+
+
+************************************************************************
+
+STATE
+ %0Y01808W0Y02804W
+
+I_TC: -30
+************************************************************************
+
+STATE
+ %0I03804W0I01804W
+
+I_TC: -30
+************************************************************************
+
+STATE
+ %0I02804W0I01804W
+
+I_TC: -30
+************************************************************************
+
+STATE
+ %0I01804W0I01804W
+
+I_TC: -43

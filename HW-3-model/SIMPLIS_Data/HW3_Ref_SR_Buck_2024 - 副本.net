@@ -1,0 +1,62 @@
+* C:\Users\xiang\OneDrive - Virginia Tech\xiangzhang_VT_archive\ECE 5254 Modeling\HW-3-model\HW3_Ref_SR_Buck_2024 - 副本.sxsch
+*#SIMETRIX
+.node_map Vc 33
+.node_map Vp 32
+.node_map Vout 34
+.ac DEC 100 10 1Meg
+.print
++ ALL
+.options
++ PSP_START=180u
++ PSP_END=500u
++ PSP_NPT=1001
++ POP_ITRMAX=200
++ POP_OUTPUT_CYCLES=5
++ SNAPSHOT_INTVL=0
++ MIN_AVG_TOPOLOGY_DUR=1a
++ AVG_TOPOLOGY_DUR_MEASUREMENT_WINDOW=128
+.pop
++ TRIG_GATE={TRIG_GATE}
++ TRIG_COND=0_TO_1
++ MAX_PERIOD=2u
++ CONVERGENCE=1u
++ CYCLES_BEFORE_LAUNCH=100
++ TD_RUN_AFTER_POP_FAILS=-1
+*.tran 2m 0
+
+
+C1 25 33 83.33u IC=0
+C2 27 26 735.29n IC=0
+C3 26 33 320f IC=0
+C4 34 24 1m IC=2
+V$IPROBE1 21 34 0.0
+.PRINT I(V$IPROBE1)
+.GRAPH IPROBE1#P axisType="grid" persistence=-1 curveLabel="IL" analysis="tran|pop" xLog="auto" yLog="lin"  nowarn=true disabled=false 
+L1 19 20 150n
+.PRINT V(#Vout)
+.GRAPH :#Vout axisType="auto" persistence=-1 curveLabel="Vout" analysis="tran|pop" xLog="auto" yLog="auto"  nowarn=true disabled=false PROBEREF=Probe3  
+.PRINT V(#Vc)
+.PRINT V(#Vout)
+.GRAPH "db(:#Vc/:#Vout)" Curvelabel="Gc" nowarn=true yunit="dB" complete=True analysis="ac" axisname=bodemag ylog=lin  persistence=0
+.GRAPH "ph(-:#Vc/:#Vout)" Curvelabel="Pc" nowarn=true yunit="degrees" complete=True analysis="ac"  axisname=bodephase ylog=lin  persistence=0
+.PRINT V(#Vc)
+.PRINT V(#Vp)
+.GRAPH "db(:#Vc/:#Vp)" Curvelabel="T" nowarn=true yunit="dB" complete=True analysis="ac" axisname=bodemag ylog=lin  persistence=0
+.GRAPH "ph(-:#Vc/:#Vp)" Curvelabel="T" nowarn=true yunit="degrees" complete=True analysis="ac"  axisname=bodephase ylog=lin  persistence=0
+R1 34 26 10
+R2 26 25 618.18
+R3 34 27 1.333
+Rc1 24 0 1m
+Rl1 21 20 2m
+Ro1 34 0 200m
+X$S1 18 19 22 0 SIMPLIS_VC_SWITCH vars: ROFF=1Meg RON=1u THRESHOLD=2 HYSTWD=1m IC='OPEN' LOGIC='POS'
+X$S3 19 0 23 0 SIMPLIS_VC_SWITCH vars: ROFF=1Meg RON=1u THRESHOLD=2 HYSTWD=1m IC='OPEN' LOGIC='POS'
+X$U1 22 23 0 32 28 SIMPLIS_DIGI1_COMP_Y vars: IC=0 RIN=10Meg ROUT=10 HYSTWD=1m VOL=0 VOH=5 DELAY=2p
+V1 18 0 12
+V2 30 0 5
+V3 28 0 SAW V1=0 V2=1 FREQ=1000000 DELAY=0 OFF_UNTIL_DELAY=NO
+V4 29 0 2
+V5 32 33 AC 1m 0
+X1 22 31 PERIODIC_OP vars: VREF=2.5 VOL=0 VOH=5 HYSTWD=2m DIVIDE_BY_2=0 IC=0 DELAY=0 TRIG_COND='0_TO_1'
+X2 29 26 30 0 33 PARAM_OPAMP vars: LEVEL=2 VOS=0 IB=1p IBOS=100p A0=100Meg GBW=100Meg SR_POS=1Meg SR_NEG=100Meg CMRR=100Meg PSRR=100Meg RIN=100Meg IO_SRC_MAX=100m IO_SNK_MAX=5m ROUT=10 RO_AC=5 IQ=1m VDIFF_POS=10m VDIFF_NEG=10m USE_BACK_ANNO=1 DEF_IC_R_FF2=1 DEF_IC_R_FF3=1 BA_IC_R_FF2=2 BA_IC_R_FF3=2
+.end

@@ -1,0 +1,310 @@
+************************************************************************
+              Input file after include files are included
+                and undefined subcircuits and models are
+                    resolved through library search
+************************************************************************
+
+
+****************** MAIN CIRCUIT @ INPUT/INCLUDE FILE *******************
+* C:\Users\xiang\OneDrive - Virginia Tech\xiangzhang_VT_archive\ECE 5254 Modeling\HW-3-model\HW3_Buck_Loadstep_diff_fc.sxsch - 鍓湰.sxsch
+.node_map Vc1 73
+.node_map Vc2 76
+.node_map Vp1 74
+.node_map Vp2 77
+.node_map Vout1 72
+.node_map Vout2 75
+.ac DEC 100 100 1Meg
+.print  ALL
+.options PSP_START=3m PSP_NPT=2001 POP_ITRMAX=200 POP_OUTPUT_CYCLES=5 SNAPSHOT_INTVL=0
++ MIN_AVG_TOPOLOGY_DUR=1a AVG_TOPOLOGY_DUR_MEASUREMENT_WINDOW=128
+.pop  TRIG_GATE=X1.!D_CYCLE  TRIG_COND=0_TO_1  MAX_PERIOD=10u  CONVERGENCE=10f  CYCLES_BEFORE_LAUNCH=100
++  TD_RUN_AFTER_POP_FAILS=-1
+.tran 20m 0
+C 72 43 1m IC=1.8
+C1 48 73 1n IC=0
+C13 75 61 1m IC=1.8
+C14 67 76 3.9p IC=0
+C15 68 67 97.09p IC=0
+C2 50 49 76.92p IC=0
+C3 49 73 5.14p IC=0
+C4 66 76 250p IC=0
+I1 72 0 SQU V1=5 V2=25 FREQ=200 DELAY=0.004 OFF_UNTIL_DELAY=YES IDLE_IN_POP=YES
+I4 75 0 SQU V1=5 V2=25 FREQ=200 DELAY=0.004 OFF_UNTIL_DELAY=YES IDLE_IN_POP=YES
+V$IPROBE1 40 72 0.0
+.PRINT I(V$IPROBE1)
+.GRAPH IPROBE1#P axisType="auto" persistence=-1 curveLabel="IL(fc=80kHz)" analysis="tran|pop"
++ xLog="auto" yLog="lin"  nowarn=true disabled=false 
+V$IPROBE3 58 75 0.0
+.PRINT I(V$IPROBE3)
+.GRAPH IPROBE3#P axisType="grid" persistence=-1 curveLabel="IL(fc=1kHz)" analysis="tran|pop"
++ xLog="auto" yLog="lin"  nowarn=true disabled=false 
+L 38 39 150n
+L1 56 57 150n
+.PRINT V(#Vc2)
+.PRINT V(#Vp2)
+.GRAPH "db(:#Vc2/:#Vp2)" Curvelabel="GT" nowarn=true yunit="dB" complete=True analysis="ac"
++ axisname=bodemag ylog=lin  persistence=0
+.GRAPH "ph(-:#Vc2/:#Vp2)" Curvelabel="PT" nowarn=true yunit="degrees" complete=True
++ analysis="ac"  axisname=bodephase ylog=lin  persistence=0
+.PRINT V(#Vc2)
+.PRINT V(#Vout2)
+.GRAPH "db(:#Vc2/:#Vout2)" Curvelabel="Gc" nowarn=true yunit="dB" complete=True analysis="ac"
++ axisname=bodemag ylog=lin  persistence=0
+.GRAPH "ph(-:#Vc2/:#Vout2)" Curvelabel="Pc" nowarn=true yunit="degrees" complete=True
++ analysis="ac"  axisname=bodephase ylog=lin  persistence=0
+.PRINT V(#Vout1)
+.GRAPH :#Vout1 axisType="auto" persistence=4 curveLabel="Vout(fc=80kHz)" analysis="tran|pop"
++ xLog="auto" yLog="auto"  nowarn=true disabled=false PROBEREF=Probe3  
+.PRINT V(#Vc1)
+.PRINT V(#Vout1)
+.GRAPH "db(:#Vc1/:#Vout1)" Curvelabel="Gc" nowarn=true yunit="dB" complete=True analysis="ac"
++ axisname=bodemag ylog=lin  persistence=0
+.GRAPH "ph(-:#Vc1/:#Vout1)" Curvelabel="Pc" nowarn=true yunit="degrees" complete=True
++ analysis="ac"  axisname=bodephase ylog=lin  persistence=0
+.PRINT V(#Vc1)
+.PRINT V(#Vp1)
+.GRAPH "db(:#Vc1/:#Vp1)" Curvelabel="GT" nowarn=true yunit="dB" complete=True analysis="ac"
++ axisname=bodemag ylog=lin  persistence=0
+.GRAPH "ph(-:#Vc1/:#Vp1)" Curvelabel="PT" nowarn=true yunit="degrees" complete=True
++ analysis="ac"  axisname=bodephase ylog=lin  persistence=0
+.PRINT V(#Vout2)
+.GRAPH :#Vout2 axisType="auto" persistence=4 curveLabel="Vout(fc=1kHz)" analysis="tran|pop"
++ xLog="auto" yLog="auto"  nowarn=true disabled=false PROBEREF=Probe6  
+R1 72 49 100k
+R13 67 66 62.82k
+R14 75 68 10.1k
+R15 75 67 100k
+R2 49 48 78.74k
+R3 72 50 12.75k
+Rc 43 0 1m
+Rc1 61 0 1m
+Rl 40 39 2m
+Rl1 58 57 2m
+Ro 72 0 200m
+Ro1 75 0 200m
+X$S1 37 38 41 0 SIMPLIS_VC_SWITCH$1
+X$S2 38 0 42 0 SIMPLIS_VC_SWITCH$2
+X$S3 56 0 60 0 SIMPLIS_VC_SWITCH$3
+X$S4 55 56 59 0 SIMPLIS_VC_SWITCH$4
+X$U1 41 42 0 74 51 SIMPLIS_DIGI1_COMP_Y$5
+X$U2 59 60 0 77 69 SIMPLIS_DIGI1_COMP_Y$6
+V1 37 0 12
+V13 69 0 SAW V1=0 V2=1 FREQ=1000000 DELAY=0 OFF_UNTIL_DELAY=NO
+V14 77 76 AC 1m 0
+V15 55 0 12
+V2 53 0 5
+V3 51 0 SAW V1=0 V2=1 FREQ=1000000 DELAY=0 OFF_UNTIL_DELAY=NO
+V4 52 0 2
+V5 74 73 AC 1m 0
+V7 70 0 2
+V8 71 0 5
+X1 41 54 PERIODIC_OP$7
+X2 52 49 53 0 73 PARAM_OPAMP$8
+X6 70 67 71 0 76 PARAM_OPAMP$9
+
+********  SUBCIRCUIT PARAM_OPAMP$9 @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.subckt PARAM_OPAMP$9  1 36 20 12 15
+.NODE_MAP inp 1
+.NODE_MAP inn 36
+.NODE_MAP vsp 20
+.NODE_MAP vsn 12
+.NODE_MAP out 15
+VOSBAL  7  29  DC   0
+EU1     7  1 20 12  1e-08
+IB5     1 12 DC     5.1e-11
+IB6     36 12 DC    -4.9e-11
+RDM    36 29        100000000
+RCM    12 13 5.000000e+11
+G5     12 13 36 31 1e-12
+G6     12 13  1 31 1e-12
+RP1    31 20        15000
+RP2    31 12        15000
+GCM    16 12 13 12  1e-08
+R1     12 16        62831.8530717959
+GDM    12 16 29 36 1
+R2     31   6           19999.9960000008
+G3      6  31  16 12    1.59154974922884e-08
+G4     11  31   6 31    1000000
+ROUT   31  11           5
+RO1    11 15            5
+
+********  MODEL M3M @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.MODEL M3M VPWLR NSEG= 2     X0= 0.0         Y0= 0.0     X1= 1.0         Y1= 0.01U
++     X2= 2.0         Y2= 10
+R03    15 20 200.0MEG
+R02    15 12 200.0MEG
+FF1     12  28  RO1  1.0
+!R_FF2  28  12  M3M  IC=2
+!R_FF3  12  28  M3M  IC=2
+FF2     20  31  !R_FF2  1.0
+FF3     31  12  !R_FF3  1.0
+!R_SLEW_RATE  16  12  M1M  IC=2
+
+********  MODEL M1M @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.MODEL M1M VPWLR NSEG= 3     X0= -10001 Y0= -1MEG     X1= -10000 Y1=  0.     X2= 100
++ Y2=  0.0     X3= 101 Y3=  1MEG
+H_IOUT_LIMIT 301 12 RO1 1K
+!R_IOUT_LIMIT 301 12 M2M IC=2
+
+********  MODEL M2M @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.MODEL M2M VPWLR NSEG= 3     X0= -6 Y0= -1.0     X1= -5 Y1=  0.0     X2= 100 Y2= 
++ 0.0     X3= 101 Y3=  1.0
+F_IOUT_LIMIT  11 31 !R_IOUT_LIMIT 10K
+VP1    20  30  DC 1.01
+!R_VP_LIMIT 15 30 M3M IC=1
+VM1    32  12  DC 1.01
+!R_VM_LIMIT 32 15 M3M IC=1
+C2  11   6 1.59154943091895e-12 
+.ends PARAM_OPAMP$9
+
+********  SUBCIRCUIT PARAM_OPAMP$8 @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.subckt PARAM_OPAMP$8  1 36 20 12 15
+.NODE_MAP inp 1
+.NODE_MAP inn 36
+.NODE_MAP vsp 20
+.NODE_MAP vsn 12
+.NODE_MAP out 15
+VOSBAL  7  29  DC   0
+EU1     7  1 20 12  1e-08
+IB5     1 12 DC     5.1e-11
+IB6     36 12 DC    -4.9e-11
+RDM    36 29        100000000
+RCM    12 13 5.000000e+11
+G5     12 13 36 31 1e-12
+G6     12 13  1 31 1e-12
+RP1    31 20        15000
+RP2    31 12        15000
+GCM    16 12 13 12  1e-08
+R1     12 16        62831.8530717959
+GDM    12 16 29 36 1
+R2     31   6           19999.9960000008
+G3      6  31  16 12    1.59154974922884e-08
+G4     11  31   6 31    1000000
+ROUT   31  11           5
+RO1    11 15            5
+
+********  MODEL M3M @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.MODEL M3M VPWLR NSEG= 2     X0= 0.0         Y0= 0.0     X1= 1.0         Y1= 0.01U
++     X2= 2.0         Y2= 10
+R03    15 20 200.0MEG
+R02    15 12 200.0MEG
+FF1     12  28  RO1  1.0
+!R_FF2  28  12  M3M  IC=2
+!R_FF3  12  28  M3M  IC=2
+FF2     20  31  !R_FF2  1.0
+FF3     31  12  !R_FF3  1.0
+!R_SLEW_RATE  16  12  M1M  IC=2
+
+********  MODEL M1M @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.MODEL M1M VPWLR NSEG= 3     X0= -10001 Y0= -1MEG     X1= -10000 Y1=  0.     X2= 100
++ Y2=  0.0     X3= 101 Y3=  1MEG
+H_IOUT_LIMIT 301 12 RO1 1K
+!R_IOUT_LIMIT 301 12 M2M IC=2
+
+********  MODEL M2M @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.MODEL M2M VPWLR NSEG= 3     X0= -6 Y0= -1.0     X1= -5 Y1=  0.0     X2= 100 Y2= 
++ 0.0     X3= 101 Y3=  1.0
+F_IOUT_LIMIT  11 31 !R_IOUT_LIMIT 10K
+VP1    20  30  DC 1.01
+!R_VP_LIMIT 15 30 M3M IC=1
+VM1    32  12  DC 1.01
+!R_VM_LIMIT 32 15 M3M IC=1
+C2  11   6 1.59154943091895e-12 
+.ends PARAM_OPAMP$8
+
+********  SUBCIRCUIT PERIODIC_OP$7 @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.subckt PERIODIC_OP$7  1 3
+.NODE_MAP IN 1
+.NODE_MAP OUT 3
+!D_CYCLE 3 0 1 302 M1M IC=0
+VREF 302 0 DC 2.5
+
+********  MODEL M1M @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.MODEL M1M COMP RIN=10MEG ROUT=50 VOL=0 VOH=5  HYSTWD=0.002 DELAY=0
+.ends PERIODIC_OP$7
+
+********  SUBCIRCUIT SIMPLIS_DIGI1_COMP_Y$6 @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.subckt SIMPLIS_DIGI1_COMP_Y$6  201 202 100 101 102
+.NODE_MAP OUT 201
+.NODE_MAP OUT_BAR 202
+.NODE_MAP RTN 100
+.NODE_MAP INP 101
+.NODE_MAP INN 102
+R_INP  101 100 10000000
+R_INN  102 100 10000000
+E_DIFF 103 100 101 102 1.0
+A_COMP %gnd_ref 100 [ 201 202 ] [ 103 ] MODEL=MD_A_COMPM IC=0
+
+********  MODEL MD_A_COMPM @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.MODEL MD_A_COMPM DIGITAL1 D_BUFFER ROUT=10 VOL=0 VOH=5  RIN=10000000 TH=0.0 HYSTWD=0.001
++  OUT_DELAY=2e-12
+.ends SIMPLIS_DIGI1_COMP_Y$6
+
+********  SUBCIRCUIT SIMPLIS_DIGI1_COMP_Y$5 @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.subckt SIMPLIS_DIGI1_COMP_Y$5  201 202 100 101 102
+.NODE_MAP OUT 201
+.NODE_MAP OUT_BAR 202
+.NODE_MAP RTN 100
+.NODE_MAP INP 101
+.NODE_MAP INN 102
+R_INP  101 100 10000000
+R_INN  102 100 10000000
+E_DIFF 103 100 101 102 1.0
+A_COMP %gnd_ref 100 [ 201 202 ] [ 103 ] MODEL=MD_A_COMPM IC=0
+
+********  MODEL MD_A_COMPM @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.MODEL MD_A_COMPM DIGITAL1 D_BUFFER ROUT=10 VOL=0 VOH=5  RIN=10000000 TH=0.0 HYSTWD=0.001
++  OUT_DELAY=2e-12
+.ends SIMPLIS_DIGI1_COMP_Y$5
+
+********  SUBCIRCUIT SIMPLIS_VC_SWITCH$4 @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.subckt SIMPLIS_VC_SWITCH$4  1 2 3 4
+.NODE_MAP P 1
+.NODE_MAP N 2
+.NODE_MAP CP 3
+.NODE_MAP CN 4
+S1 1 2 3 4 SW IC=OPEN
+
+********  MODEL SW @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.MODEL SW VCSW ROFF=1000000 RON=1e-06 TH=2 HYSTWD=0.001 LOGIC=POS
+.ends SIMPLIS_VC_SWITCH$4
+
+********  SUBCIRCUIT SIMPLIS_VC_SWITCH$3 @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.subckt SIMPLIS_VC_SWITCH$3  1 2 3 4
+.NODE_MAP P 1
+.NODE_MAP N 2
+.NODE_MAP CP 3
+.NODE_MAP CN 4
+S1 1 2 3 4 SW IC=OPEN
+
+********  MODEL SW @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.MODEL SW VCSW ROFF=1000000 RON=1e-06 TH=2 HYSTWD=0.001 LOGIC=POS
+.ends SIMPLIS_VC_SWITCH$3
+
+********  SUBCIRCUIT SIMPLIS_VC_SWITCH$2 @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.subckt SIMPLIS_VC_SWITCH$2  1 2 3 4
+.NODE_MAP P 1
+.NODE_MAP N 2
+.NODE_MAP CP 3
+.NODE_MAP CN 4
+S1 1 2 3 4 SW IC=OPEN
+
+********  MODEL SW @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.MODEL SW VCSW ROFF=1000000 RON=1e-06 TH=2 HYSTWD=0.001 LOGIC=POS
+.ends SIMPLIS_VC_SWITCH$2
+
+********  SUBCIRCUIT SIMPLIS_VC_SWITCH$1 @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.subckt SIMPLIS_VC_SWITCH$1  1 2 3 4
+.NODE_MAP P 1
+.NODE_MAP N 2
+.NODE_MAP CP 3
+.NODE_MAP CN 4
+S1 1 2 3 4 SW IC=OPEN
+
+********  MODEL SW @ input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+.MODEL SW VCSW ROFF=1000000 RON=1e-06 TH=2 HYSTWD=0.001 LOGIC=POS
+.ends SIMPLIS_VC_SWITCH$1
+.end
+********  END OF input file C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-3-model/SIMPLIS_Data/HW3_Buck_Loadstep_diff_fc.sxsch - 副本.deck
+
+

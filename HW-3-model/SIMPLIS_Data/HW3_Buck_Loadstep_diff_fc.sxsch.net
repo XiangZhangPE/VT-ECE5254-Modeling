@@ -1,0 +1,136 @@
+* C:\Users\xiang\OneDrive - Virginia Tech\xiangzhang_VT_archive\ECE 5254 Modeling\HW-3-model\HW3_Buck_Loadstep_diff_fc.sxsch.sxsch
+*#SIMETRIX
+.node_map io1 127
+.node_map io2 131
+.node_map io3 135
+.node_map Vc1 130
+.node_map Vc2 134
+.node_map Vc3 138
+.node_map Vp1 129
+.node_map Vp2 133
+.node_map Vp3 137
+.node_map Vout1 128
+.node_map Vout2 132
+.node_map Vout3 136
+.ac DEC 100 100 1Meg
+.print
++ ALL
+.options
++ PSP_START=3m
++ PSP_NPT=2001
++ POP_ITRMAX=200
++ POP_OUTPUT_CYCLES=5
++ SNAPSHOT_INTVL=0
++ MIN_AVG_TOPOLOGY_DUR=1a
++ AVG_TOPOLOGY_DUR_MEASUREMENT_WINDOW=128
+.pop
++ TRIG_GATE={TRIG_GATE}
++ TRIG_COND=0_TO_1
++ MAX_PERIOD=10u
++ CONVERGENCE=10f
++ CYCLES_BEFORE_LAUNCH=100
++ TD_RUN_AFTER_POP_FAILS=-1
+*.tran 20m 0
+
+
+C 128 64 1m IC=1.8
+C10 97 96 62.89p IC=0
+C11 96 138 1.12p IC=0
+C12 95 138 125p IC=0
+C13 132 79 1m IC=1.8
+C20 136 93 1m IC=1.8
+C4 68 67 76.92p IC=0
+C5 67 130 5.14p IC=0
+C6 66 130 1n IC=0
+C7 82 134 389.65p IC=0
+C8 83 82 78.74p IC=0
+C9 81 134 18.868n IC=0
+H1 131 0 VH1$TP_CCVS 1 
+VH1$TP_CCVS 80 0 0
+H2 127 0 VH2$TP_CCVS 1 
+VH2$TP_CCVS 65 0 0
+H3 135 0 VH3$TP_CCVS 1 
+VH3$TP_CCVS 94 0 0
+I1 128 0 SQU V1=5 V2=25 FREQ=200 DELAY=0.004 OFF_UNTIL_DELAY=YES IDLE_IN_POP=YES
+I2 128 65 AC 10m 0
+I3 132 80 AC 10m 0
+I4 132 0 SQU V1=5 V2=25 FREQ=200 DELAY=0.004 OFF_UNTIL_DELAY=YES IDLE_IN_POP=YES
+I5 136 94 AC 10m 0
+I6 136 0 SQU V1=5 V2=25 FREQ=200 DELAY=0.004 OFF_UNTIL_DELAY=YES IDLE_IN_POP=YES
+V$IPROBE1 61 128 0.0
+.PRINT I(V$IPROBE1)
+.GRAPH IPROBE1#P axisType="auto" persistence=-1 curveLabel="IL(fc=80kHz)" analysis="tran|pop" xLog="auto" yLog="lin"  nowarn=true disabled=false 
+V$IPROBE3 76 132 0.0
+.PRINT I(V$IPROBE3)
+.GRAPH IPROBE3#P axisType="grid" persistence=-1 curveLabel="IL(fc=1kHz)" analysis="tran|pop" xLog="auto" yLog="lin"  nowarn=true disabled=false 
+V$IPROBE6 90 136 0.0
+.PRINT I(V$IPROBE6)
+.GRAPH IPROBE6#P axisType="grid" persistence=-1 curveLabel="IL(fc=200kHz)" analysis="tran|pop" xLog="auto" yLog="lin"  nowarn=true disabled=false 
+L 59 60 150n
+L1 74 75 150n
+L2 88 89 150n
+.PRINT V(#Vout1)
+.PRINT V(#io1)
+.GRAPH "db(:#Vout1/:#io1)" Curvelabel="GZo_fc80kHz" nowarn=true yunit="dB" complete=True analysis="ac" axisname=bodemag ylog=lin  persistence=0
+.GRAPH "ph(-:#Vout1/:#io1)" Curvelabel="PZo_fc80kHz" nowarn=true yunit="degrees" complete=True analysis="ac"  axisname=bodephase ylog=lin  persistence=0
+.PRINT V(#Vout2)
+.PRINT V(#io2)
+.GRAPH "db(:#Vout2/:#io2)" Curvelabel="GZo_fc1kHz" nowarn=true yunit="dB" complete=True analysis="ac" axisname=bodemag ylog=lin  persistence=0
+.GRAPH "ph(-:#Vout2/:#io2)" Curvelabel="PZo_fc1kHz" nowarn=true yunit="degrees" complete=True analysis="ac"  axisname=bodephase ylog=lin  persistence=0
+.PRINT V(#Vout3)
+.PRINT V(#io3)
+.GRAPH "db(:#Vout3/:#io3)" Curvelabel="GZo_fc200kHz" nowarn=true yunit="dB" complete=True analysis="ac" axisname=bodemag ylog=lin  persistence=0
+.GRAPH "ph(-:#Vout3/:#io3)" Curvelabel="PZo_fc200kHz" nowarn=true yunit="degrees" complete=True analysis="ac"  axisname=bodephase ylog=lin  persistence=0
+.PRINT V(#Vout1)
+.GRAPH :#Vout1 axisType="auto" persistence=4 curveLabel="Vout(fc=80kHz)" analysis="tran|pop" xLog="auto" yLog="auto"  nowarn=true disabled=false PROBEREF=Probe3  
+.PRINT V(#Vout2)
+.GRAPH :#Vout2 axisType="auto" persistence=4 curveLabel="Vout(fc=1kHz)" analysis="tran|pop" xLog="auto" yLog="auto"  nowarn=true disabled=false PROBEREF=Probe6  
+.PRINT V(#Vout3)
+.GRAPH :#Vout3 axisType="auto" persistence=4 curveLabel="Vout(fc=200kHz)" analysis="tran|pop" xLog="auto" yLog="auto"  nowarn=true disabled=false PROBEREF=Probe7  
+R10 136 97 15.59k
+R11 96 95 261.44k
+R12 136 96 100k
+R4 67 66 78.74k
+R5 128 67 100k
+R6 128 68 12.75k
+R7 132 82 100k
+R8 82 81 980
+R9 132 83 12.45k
+Rc 64 0 1m
+Rc1 79 0 1m
+Rc2 93 0 1m
+Rl 61 60 2m
+Rl1 76 75 2m
+Rl2 90 89 2m
+Ro 128 0 200m
+Ro1 132 0 200m
+Ro2 136 0 200m
+X$S1 58 59 62 0 SIMPLIS_VC_SWITCH vars: ROFF=1Meg RON=1u THRESHOLD=2 HYSTWD=1m IC='OPEN' LOGIC='POS'
+X$S2 59 0 63 0 SIMPLIS_VC_SWITCH vars: ROFF=1Meg RON=1u THRESHOLD=2 HYSTWD=1m IC='OPEN' LOGIC='POS'
+X$S3 74 0 78 0 SIMPLIS_VC_SWITCH vars: ROFF=1Meg RON=1u THRESHOLD=2 HYSTWD=1m IC='OPEN' LOGIC='POS'
+X$S4 73 74 77 0 SIMPLIS_VC_SWITCH vars: ROFF=1Meg RON=1u THRESHOLD=2 HYSTWD=1m IC='OPEN' LOGIC='POS'
+X$S5 88 0 92 0 SIMPLIS_VC_SWITCH vars: ROFF=1Meg RON=1u THRESHOLD=2 HYSTWD=1m IC='OPEN' LOGIC='POS'
+X$S6 87 88 91 0 SIMPLIS_VC_SWITCH vars: ROFF=1Meg RON=1u THRESHOLD=2 HYSTWD=1m IC='OPEN' LOGIC='POS'
+X$U1 62 63 0 129 69 SIMPLIS_DIGI1_COMP_Y vars: IC=0 RIN=10Meg ROUT=10 HYSTWD=1m VOL=0 VOH=5 DELAY=2p
+X$U2 77 78 0 133 84 SIMPLIS_DIGI1_COMP_Y vars: IC=0 RIN=10Meg ROUT=10 HYSTWD=1m VOL=0 VOH=5 DELAY=2p
+X$U3 91 92 0 137 98 SIMPLIS_DIGI1_COMP_Y vars: IC=0 RIN=10Meg ROUT=10 HYSTWD=1m VOL=0 VOH=5 DELAY=2p
+V1 58 0 12
+V10 85 0 2
+V11 100 0 5
+V12 99 0 2
+V13 84 0 SAW V1=0 V2=1 FREQ=1000000 DELAY=0 OFF_UNTIL_DELAY=NO
+V14 133 134 AC 0 0
+V15 73 0 12
+V20 137 138 AC 0 0
+V23 98 0 SAW V1=0 V2=1 FREQ=1000000 DELAY=0 OFF_UNTIL_DELAY=NO
+V24 87 0 12
+V3 69 0 SAW V1=0 V2=1 FREQ=1000000 DELAY=0 OFF_UNTIL_DELAY=NO
+V5 129 130 AC 0 0
+V7 70 0 2
+V8 71 0 5
+V9 86 0 5
+X1 62 72 PERIODIC_OP vars: VREF=2.5 VOL=0 VOH=5 HYSTWD=2m DIVIDE_BY_2=0 IC=0 DELAY=0 TRIG_COND='0_TO_1'
+X3 70 67 71 0 130 PARAM_OPAMP vars: LEVEL=2 VOS=0 IB=1p IBOS=100p A0=100Meg GBW=100Meg SR_POS=1Meg SR_NEG=100Meg CMRR=100Meg PSRR=100Meg RIN=100Meg IO_SRC_MAX=100m IO_SNK_MAX=5m ROUT=10 RO_AC=5 IQ=1m VDIFF_POS=10m VDIFF_NEG=10m USE_BACK_ANNO=1 DEF_IC_R_FF2=1 DEF_IC_R_FF3=1 BA_IC_R_FF2=2 BA_IC_R_FF3=2
+X4 85 82 86 0 134 PARAM_OPAMP vars: LEVEL=2 VOS=0 IB=1p IBOS=100p A0=100Meg GBW=100Meg SR_POS=1Meg SR_NEG=100Meg CMRR=100Meg PSRR=100Meg RIN=100Meg IO_SRC_MAX=100m IO_SNK_MAX=5m ROUT=10 RO_AC=5 IQ=1m VDIFF_POS=10m VDIFF_NEG=10m USE_BACK_ANNO=1 DEF_IC_R_FF2=1 DEF_IC_R_FF3=1 BA_IC_R_FF2=2 BA_IC_R_FF3=2
+X5 99 96 100 0 138 PARAM_OPAMP vars: LEVEL=2 VOS=0 IB=1p IBOS=100p A0=100Meg GBW=100Meg SR_POS=1Meg SR_NEG=100Meg CMRR=100Meg PSRR=100Meg RIN=100Meg IO_SRC_MAX=100m IO_SNK_MAX=5m ROUT=10 RO_AC=5 IQ=1m VDIFF_POS=10m VDIFF_NEG=10m USE_BACK_ANNO=1 DEF_IC_R_FF2=1 DEF_IC_R_FF3=1 BA_IC_R_FF2=2 BA_IC_R_FF3=2
+.end

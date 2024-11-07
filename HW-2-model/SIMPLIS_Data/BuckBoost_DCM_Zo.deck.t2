@@ -1,0 +1,43 @@
+$$$ 1 9945 36    simplis  DATA FOR PLOTTING,  Sat Oct  5 17:38:06 2024     
+INPUT FILE: C:/Users/xiang/OneDrive - Virginia Tech/xiangzhang_VT_archive/ECE 5254 Modeling/HW-2-model/SIMPLIS_Data/BuckBoost_DCM_Zo.deck
+POP Analysis
+9945 DATA PTS                 
+36 VARIABLES                                      
+0   TIME
+1   I(V$IPROBE1#P)
+2   V(#Vo)
+3   V(#io)
+4   V(20)
+5   V(21)
+6   V(#Vc)
+7   V(22)
+8   V(23)
+9   V(25)
+10  V(#Vin)
+11  V(#d)
+12  V(19)
+13  V(#iL)
+14  I(R3#P)
+15  I(L2#P)
+16  I(C2#P)
+17  I(V2#P)
+18  I(V3#P)
+19  I(V4#P)
+20  I(VH2$TP_CCVS#P)
+21  I(VH3$TP_CCVS#P)
+22  I(I1#P)
+23  I(H2#P)
+24  I(H3#P)
+25  I(X$D1#P)
+26  I(X$D1#N)
+27  I(X$S2#P)
+28  I(X$S2#N)
+29  I(X$S2#CP)
+30  I(X$S2#CN)
+31  I(X$U1#OUT)
+32  I(X$U1#RTN)
+33  I(X$U1#INP)
+34  I(X$U1#INN)
+35  I(X1#IN)
+36  I(X1#OUT)
+

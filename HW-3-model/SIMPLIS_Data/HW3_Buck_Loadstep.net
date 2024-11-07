@@ -1,0 +1,48 @@
+* C:\Users\xiang\OneDrive - Virginia Tech\xiangzhang_VT_archive\ECE 5254 Modeling\HW-3-model\HW3_Buck_Loadstep.sxsch
+*#SIMETRIX
+.node_map Vc 33
+.node_map Vp 32
+.node_map Vout 34
+*** SD COMMENT ***.ac DEC 100 10 1Meg
+.print  ALL
+.options  PSP_START=3m  PSP_NPT=1001  POP_ITRMAX=200  POP_OUTPUT_CYCLES=5  SNAPSHOT_INTVL=0  MIN_AVG_TOPOLOGY_DUR=1a  AVG_TOPOLOGY_DUR_MEASUREMENT_WINDOW=128
+*** SD COMMENT ***.pop  TRIG_GATE={TRIG_GATE}  TRIG_COND=0_TO_1  MAX_PERIOD=2u  CONVERGENCE=10f  CYCLES_BEFORE_LAUNCH=200  TD_RUN_AFTER_POP_FAILS=0
+*.tran 2m 0
+
+C 34 24 1m IC=2
+C1 25 33 83.33u IC=0
+C2 27 26 735.29n IC=0
+C3 26 33 320f IC=0
+V$IPROBE1 21 34 0.0
+.PRINT I(V$IPROBE1)
+.GRAPH IPROBE1#P axisType="grid" persistence=-1 curveLabel="IL" analysis="tran|pop" xLog="auto" yLog="lin"  nowarn=true disabled=false 
+L 19 20 150n
+.PRINT V(#Vc)
+.PRINT V(#Vp)
+.GRAPH "db(:#Vc/:#Vp)" Curvelabel="T" nowarn=true yunit="dB" complete=True analysis="ac" axisname=bodemag ylog=lin  persistence=0
+.GRAPH "ph(-:#Vc/:#Vp)" Curvelabel="T" nowarn=true yunit="degrees" complete=True analysis="ac"  axisname=bodephase ylog=lin  persistence=0
+.PRINT V(#Vout)
+.GRAPH :#Vout axisType="auto" persistence=-1 curveLabel="Vout" analysis="tran|pop" xLog="auto" yLog="auto"  nowarn=true disabled=false PROBEREF=Probe3  
+.PRINT V(#Vc)
+.PRINT V(#Vout)
+.GRAPH "db(:#Vc/:#Vout)" Curvelabel="Gc" nowarn=true yunit="dB" complete=True analysis="ac" axisname=bodemag ylog=lin  persistence=0
+.GRAPH "ph(-:#Vc/:#Vout)" Curvelabel="Pc" nowarn=true yunit="degrees" complete=True analysis="ac"  axisname=bodephase ylog=lin  persistence=0
+R1 34 26 10
+R2 26 25 618.18
+R3 34 27 1.333
+Rc 24 0 1m
+Rl 21 20 2m
+Ro 34 0 200m
+X$S2 19 0 23 0 SIMPLIS_VC_SWITCH vars: ROFF=1Meg RON=1u THRESHOLD=2 HYSTWD=1m IC='OPEN' LOGIC='POS'
+X$S3 18 19 22 0 SIMPLIS_VC_SWITCH vars: ROFF=1Meg RON=1u THRESHOLD=2 HYSTWD=1m IC='OPEN' LOGIC='POS'
+X$U1 22 23 0 32 29 SIMPLIS_DIGI1_COMP_Y vars: IC=0 RIN=10Meg ROUT=10 HYSTWD=1m VOL=0 VOH=5 DELAY=2p
+V1 32 33 AC 1m 0
+V2 30 0 5
+V3 29 0 SAW V1=0 V2=1 FREQ=1000000 DELAY=0 OFF_UNTIL_DELAY=NO
+V4 28 0 2
+V8 18 0 12
+X1 28 26 30 0 33 PARAM_OPAMP vars: LEVEL=2 VOS=0 IB=1p IBOS=100p A0=100Meg GBW=100Meg SR_POS=1Meg SR_NEG=100Meg CMRR=100Meg PSRR=100Meg RIN=100Meg IO_SRC_MAX=100m IO_SNK_MAX=5m ROUT=10 RO_AC=5 IQ=1m VDIFF_POS=10m VDIFF_NEG=10m USE_BACK_ANNO=1 DEF_IC_R_FF2=1 DEF_IC_R_FF3=1 BA_IC_R_FF2=2 BA_IC_R_FF3=2
+X3 22 31 PERIODIC_OP vars: VREF=2.5 VOL=0 VOH=5 HYSTWD=2m DIVIDE_BY_2=0 IC=0 DELAY=0 TRIG_COND='0_TO_1'
+X_SystemDesigner_Clock_Source 0 SIMPLIS_SD_CLK_TREE_1 vars: SYNC_ON=1 SYS_ORDER=0 SYS_CLK_EN=1 SYS_GRAPH=1 SYS_CLK_LABEL='SysClock' SYS_FREQ=50Meg SYS_DUTY=50 SYS_DELAY=-1 USER_ORDER_1=1 USER_EN_1=0 USER_GRAPH_1=0 USER_LABEL_1='User1' USER_FREQ_1=25Meg USER_DUTY_1=50 USER_DELAY_1=-1 USER_ORDER_2=2 USER_EN_2=0 USER_GRAPH_2=0 USER_LABEL_2='User2' USER_FREQ_2=12.5Meg USER_DUTY_2=50 USER_DELAY_2=-1 USER_ORDER_3=3 USER_EN_3=0 USER_GRAPH_3=0 USER_LABEL_3='User3' USER_FREQ_3=6.25Meg USER_DUTY_3=50 USER_DELAY_3=-1 USER_ORDER_4=4 USER_EN_4=0 USER_GRAPH_4=0 USER_LABEL_4='User4' USER_FREQ_4=3.125Meg USER_DUTY_4=50 USER_DELAY_4=-1 USER_ORDER_5=5 USER_EN_5=0 USER_GRAPH_5=0 USER_LABEL_5='User5' USER_FREQ_5=1.5625Meg USER_DUTY_5=50 USER_DELAY_5=-1 USER_ORDER_6=6 USER_EN_6=0 USER_GRAPH_6=0 USER_LABEL_6='User6' USER_FREQ_6=0.781250Meg USER_DUTY_6=50 USER_DELAY_6=-1 USER_ORDER_7=7 USER_EN_7=0 USER_GRAPH_7=0 USER_LABEL_7='User7' USER_FREQ_7=0.390625Meg USER_DUTY_7=50 USER_DELAY_7=-1
+
+.END

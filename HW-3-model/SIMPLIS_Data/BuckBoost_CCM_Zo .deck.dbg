@@ -1,0 +1,9 @@
+>>> Mon Oct 28 18:34:39 2024, requesting 1 copy of simplis, maintenance version 2019.0201,  GRANTED.
+>>> Mon Oct 28 18:34:39 2024, requesting 1 copy of periodic_op, maintenance version 2019.0201,  GRANTED.
+	*** POP version: 8.300000
+	*** Required POP convergence: 1.000000e-14
+	*** POP analysis failed.  Max. period exceeded.
+	*** POP convergence when exiting the POP analysis: 2.951002e-01.
+	*** Total number of topologies: 2
+>>> Mon Oct 28 18:34:44 2024, returning  1 copy of simplis.
+>>> Mon Oct 28 18:34:44 2024, returning  1 copy of periodic_op.

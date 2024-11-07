@@ -1,0 +1,50 @@
+* C:\Users\xiang\OneDrive - Virginia Tech\xiangzhang_VT_archive\ECE 5254 Modeling\HW-3-model\HW3_Ref_SR_Buck_2024.sxsch
+*#SIMETRIX
+.node_map Vc 32
+.node_map Vp 31
+.node_map Vout 30
+.AC DEC 100 10 1Meg
+.PRINT
++ ALL
+.OPTIONS
++ PSP_START=180u
++ PSP_END=500u
++ PSP_NPT=1001
++ POP_ITRMAX=200
+.POP
++ TRIG_GATE={TRIG_GATE}
++ TRIG_COND=0_TO_1
++ MAX_PERIOD=3u
++ CONVERGENCE=1u
++ CYCLES_BEFORE_LAUNCH=100
+*.TRAN 2m 0
+
+
+C 30 23 1.2 IC=2.4
+C1 24 32 1n IC=0
+I1 30 0 SQU V1=5 V2=15 FREQ=200 DELAY=0.0002 OFF_UNTIL_DELAY=NO
+L 19 20 100n
+.PRINT V(#Vc)
+.PRINT V(#Vout)
+.GRAPH "db(:#Vc/:#Vout)" Curvelabel="Gc" nowarn=true yunit="dB" complete=True analysis="ac" axisname=bodemag ylog=lin  persistence=0
+.GRAPH "ph(-:#Vc/:#Vout)" Curvelabel="Pc" nowarn=true yunit="degrees" complete=True analysis="ac"  axisname=bodephase ylog=lin  persistence=0
+.PRINT V(#Vc)
+.PRINT V(#Vp)
+.GRAPH "db(:#Vc/:#Vp)" Curvelabel="GT" nowarn=true yunit="dB" complete=True analysis="ac" axisname=bodemag ylog=lin  persistence=0
+.GRAPH "ph(-:#Vc/:#Vp)" Curvelabel="PT" nowarn=true yunit="degrees" complete=True analysis="ac"  axisname=bodephase ylog=lin  persistence=0
+R1 30 25 50k
+R2 25 24 1k
+Rc 23 0 1m
+Rl 30 20 1m
+Ro 30 0 1
+X$S1 18 19 21 0 SIMPLIS_VC_SWITCH vars: ROFF=1Meg RON=1u THRESHOLD=2 HYSTWD=1m IC='OPEN' LOGIC='POS'
+X$S2 19 0 22 0 SIMPLIS_VC_SWITCH vars: ROFF=1Meg RON=1u THRESHOLD=2 HYSTWD=1m IC='OPEN' LOGIC='POS'
+X$U1 21 22 0 31 27 SIMPLIS_DIGI1_COMP_Y vars: IC=0 RIN=10Meg ROUT=10 HYSTWD=1m VOL=0 VOH=5 DELAY=2p
+V1 18 0 5
+V2 28 0 5
+V3 27 0 SAW V1=0 V2=1 FREQ=1000000 DELAY=0 OFF_UNTIL_DELAY=NO
+V4 26 0 1.2
+V5 31 32 AC 1m 0
+X1 21 29 PERIODIC_OP vars: VREF=2.5 VOL=0 VOH=5 HYSTWD=2m DIVIDE_BY_2=0 IC=0 DELAY=0 TRIG_COND='0_TO_1'
+X2 26 25 28 0 32 PARAM_OPAMP vars: LEVEL=2 VOS=0 IB=1p IBOS=100p A0=100Meg GBW=100Meg SR_POS=1Meg SR_NEG=100Meg CMRR=100Meg PSRR=100Meg RIN=100Meg IO_SRC_MAX=100m IO_SNK_MAX=5m ROUT=10 RO_AC=5 IQ=1m VDIFF_POS=10m VDIFF_NEG=10m USE_BACK_ANNO=1 DEF_IC_R_FF2=1 DEF_IC_R_FF3=1 BA_IC_R_FF2=2 BA_IC_R_FF3=2
+.end
